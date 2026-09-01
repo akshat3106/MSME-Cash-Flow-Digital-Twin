@@ -67,16 +67,14 @@ export default function LoginPage() {
             displayName: 'Admin',
             businessName: 'Hussain Crafts',
           });
-          // Freshly-provisioned account: go through the same onboarding a
-          // real signup does (this is where the CSV upload and consent
-          // cards live) instead of skipping straight to the dashboard.
-          navigate('/onboarding', { replace: true });
-          return;
+        } else {
+          throw err;
         }
-        throw err;
       }
-      // Existing demo account: behaves like any returning user's login.
-      navigate(from, { replace: true });
+      // Always the full walkthrough, not just on first provisioning - this
+      // button exists to demo the product (including the CSV upload and
+      // consent cards in onboarding), not to shortcut past it.
+      navigate('/onboarding', { replace: true });
     } catch (err) {
       console.error('Admin demo login error:', err);
       setError(getFriendlyAuthErrorMessage(err));
