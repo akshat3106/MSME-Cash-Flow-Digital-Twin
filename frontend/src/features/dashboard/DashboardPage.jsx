@@ -21,7 +21,6 @@ import {
   getPaymentBehaviour,
   getStatutoryExposure,
 } from '@/mocks/api/dashboard';
-import DataAndConsentCard from './components/DataAndConsentCard';
 import HeroStatStrip from './components/HeroStatStrip';
 import ObligationsList from './components/ObligationsList';
 import RiskBreakdownRow from './components/RiskBreakdownRow';
@@ -81,8 +80,6 @@ export default function DashboardPage() {
           </>
         }
       />
-
-      <DataAndConsentCard />
 
       <HeroStatStrip data={data} />
 
