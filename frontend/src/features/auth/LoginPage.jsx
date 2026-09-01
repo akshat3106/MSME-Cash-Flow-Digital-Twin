@@ -1,22 +1,31 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AlertCircle, ArrowRight, Eye, EyeOff, Lock, Mail, Loader2, ShieldCheck } from 'lucide-react';
+import { AlertCircle, ArrowRight, Eye, EyeOff, Lock, Mail, Loader2, ShieldCheck, Zap } from 'lucide-react';
 import { useAuth, getFriendlyAuthErrorMessage } from './AuthContext';
 import Button from '@/components/shared/Button';
 import DisclaimerBar from '@/components/shared/DisclaimerBar';
 import ForgotPasswordModal from './ForgotPasswordModal';
 import { CashTwinLogo } from '@/layouts/MarketingLayout';
 
+// One-click walkthrough login for demos/judging - no credentials to type or
+// remember. First click ever provisions this Firebase user (auth/user-not-
+// found or the newer unified auth/invalid-credential both mean "doesn't
+// exist yet, or wrong password" - since we control the password, treat
+// either as "create it"); every click after that just signs in.
+const DEMO_EMAIL = 'admin@cashtwin.demo';
+const DEMO_PASSWORD = 'CashTwinDemo!2026';
+
 export default function LoginPage() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { login } = useAuth();
+  const { login, signup } = useAuth();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
   const [loading, setLoading] = useState(false);
+  const [demoLoading, setDemoLoading] = useState(false);
   const [error, setError] = useState('');
   const [forgotPasswordOpen, setForgotPasswordOpen] = useState(false);
 
@@ -41,6 +50,33 @@ export default function LoginPage() {
       setError(getFriendlyAuthErrorMessage(err));
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleAdminLogin = async () => {
+    setError('');
+    setDemoLoading(true);
+    try {
+      try {
+        await login(DEMO_EMAIL, DEMO_PASSWORD);
+      } catch (err) {
+        if (err.code === 'auth/user-not-found' || err.code === 'auth/invalid-credential') {
+          await signup({
+            email: DEMO_EMAIL,
+            password: DEMO_PASSWORD,
+            displayName: 'Admin',
+            businessName: 'Hussain Crafts',
+          });
+        } else {
+          throw err;
+        }
+      }
+      navigate(from, { replace: true });
+    } catch (err) {
+      console.error('Admin demo login error:', err);
+      setError(getFriendlyAuthErrorMessage(err));
+    } finally {
+      setDemoLoading(false);
     }
   };
 
@@ -192,6 +228,29 @@ export default function LoginPage() {
                 </Button>
               </div>
             </form>
+
+            {/* One-click demo login - for judging/walkthroughs, no credentials needed */}
+            <div className="mt-5 flex items-center gap-3">
+              <div className="h-px flex-1 bg-edge-dark" />
+              <span className="text-[11px] uppercase tracking-wide text-chalk-lo">or</span>
+              <div className="h-px flex-1 bg-edge-dark" />
+            </div>
+            <button
+              type="button"
+              onClick={handleAdminLogin}
+              disabled={demoLoading || loading}
+              className="mt-4 flex h-11 w-full items-center justify-center gap-2 rounded-lg border border-lime/30 bg-lime-8 text-sm font-semibold text-lime transition-colors hover:bg-lime-16 disabled:opacity-60"
+            >
+              {demoLoading ? (
+                <>
+                  <Loader2 className="h-4 w-4 animate-spin" /> Signing in…
+                </>
+              ) : (
+                <>
+                  <Zap className="h-4 w-4" /> Admin Login (Demo Access)
+                </>
+              )}
+            </button>
 
             {/* Footer / Switch */}
             <div className="mt-6 border-t border-edge-dark pt-5 text-center text-body-sm text-chalk-lo">
