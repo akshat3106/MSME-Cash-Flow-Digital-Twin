@@ -67,10 +67,15 @@ export default function LoginPage() {
             displayName: 'Admin',
             businessName: 'Hussain Crafts',
           });
-        } else {
-          throw err;
+          // Freshly-provisioned account: go through the same onboarding a
+          // real signup does (this is where the CSV upload and consent
+          // cards live) instead of skipping straight to the dashboard.
+          navigate('/onboarding', { replace: true });
+          return;
         }
+        throw err;
       }
+      // Existing demo account: behaves like any returning user's login.
       navigate(from, { replace: true });
     } catch (err) {
       console.error('Admin demo login error:', err);
