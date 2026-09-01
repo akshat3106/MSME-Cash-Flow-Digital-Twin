@@ -1,19 +1,24 @@
 import { useState } from 'react';
-import { Building2, Mail, MapPin, Phone, Save, ShieldCheck, User } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { Building2, LogOut, Mail, MapPin, Phone, Save, ShieldCheck, User } from 'lucide-react';
 import Button from '@/components/shared/Button';
 import { useToast } from '@/components/shared/Toast';
 import { recordAuditEvent } from '@/mocks/api/auditLog';
+import { useAuth } from '@/features/auth/AuthContext';
 
 export default function ProfileSettingsPage() {
+  const navigate = useNavigate();
   const { toast } = useToast();
+  const { currentUser, businessName, updateUserProfile, setBusiness, logout } = useAuth();
   const [saving, setSaving] = useState(false);
+  const [loggingOut, setLoggingOut] = useState(false);
 
   const [formData, setFormData] = useState({
-    ownerName: 'Mark Hussain',
-    email: 'mark@hussaincrafts.in',
+    ownerName: currentUser?.displayName || 'Mark Hussain',
+    email: currentUser?.email || 'mark@hussaincrafts.in',
     phone: '+91 98201 44521',
     role: 'Proprietor / Managing Director',
-    businessName: 'Shree Balaji Furniture Works',
+    businessName: businessName || 'Shree Balaji Furniture Works',
     tradeName: 'Hussain Crafts & Interiors',
     gstin: '27AABCS1429B1Z5',
     udyam: 'UDYAM-MH-12-0048291',
@@ -26,12 +31,18 @@ export default function ProfileSettingsPage() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSave = (e) => {
+  const handleSave = async (e) => {
     e.preventDefault();
     setSaving(true);
 
-    setTimeout(() => {
-      setSaving(false);
+    try {
+      if (formData.ownerName && updateUserProfile) {
+        await updateUserProfile({ displayName: formData.ownerName });
+      }
+      if (formData.businessName && setBusiness) {
+        setBusiness(formData.businessName);
+      }
+
       recordAuditEvent({
         event: 'Business profile updated',
         actor: 'owner',
@@ -43,7 +54,37 @@ export default function ProfileSettingsPage() {
         description: 'Your business profile and threshold settings have been updated.',
         tone: 'healthy',
       });
-    }, 400);
+    } catch (err) {
+      console.error('Failed to update profile:', err);
+      toast({
+        title: 'Error updating profile',
+        description: 'Could not update your profile details. Please try again.',
+        tone: 'risk',
+      });
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleLogout = async () => {
+    setLoggingOut(true);
+    try {
+      await logout();
+      toast({
+        title: 'Signed out',
+        description: 'You have been safely signed out of CashTwin.',
+        tone: 'healthy',
+      });
+      navigate('/login');
+    } catch (err) {
+      console.error('Logout error:', err);
+      toast({
+        title: 'Error signing out',
+        description: 'An error occurred during logout. Please try again.',
+        tone: 'risk',
+      });
+      setLoggingOut(false);
+    }
   };
 
   return (
@@ -250,6 +291,42 @@ export default function ProfileSettingsPage() {
           </Button>
         </div>
       </form>
+
+      {/* Account Session & Logout Section */}
+      <div className="rounded-xl border border-risk/30 bg-surface p-6 shadow-sm">
+        <div className="flex items-center gap-3 border-b border-edge-dark pb-4">
+          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-risk-16 text-risk">
+            <LogOut className="h-5 w-5" />
+          </div>
+          <div>
+            <h3 className="font-display text-base font-semibold text-chalk-hi">Account Session &amp; Security</h3>
+            <p className="text-body-sm text-chalk-lo">Active Firebase Authentication session</p>
+          </div>
+        </div>
+
+        <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div className="space-y-1">
+            <p className="text-body-sm text-chalk-hi font-medium">
+              Signed in as <span className="font-mono text-lime">{currentUser?.email || formData.email}</span>
+            </p>
+            <p className="text-xs text-chalk-lo">
+              Session is managed securely by Firebase Authentication (msme-cashflow).
+            </p>
+          </div>
+
+          <Button
+            type="button"
+            variant="destructive"
+            onClick={handleLogout}
+            disabled={loggingOut}
+            className="shrink-0"
+          >
+            <LogOut className="h-4 w-4 mr-1.5" />
+            {loggingOut ? 'Signing out…' : 'Sign out of CashTwin'}
+          </Button>
+        </div>
+      </div>
     </section>
   );
 }
+

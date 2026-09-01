@@ -1,7 +1,9 @@
 import {
   ChevronLeft,
   ChevronRight,
+  ExternalLink,
   FileText,
+  Home,
   LayoutDashboard,
   Lightbulb,
   LogOut,
@@ -11,7 +13,7 @@ import {
   Waypoints,
 } from 'lucide-react';
 import { useCallback, useMemo, useState } from 'react';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet, useNavigate } from 'react-router-dom';
 import cn from '@/lib/cn';
 import CalculationLineage from '@/components/shared/CalculationLineage';
 import DisclaimerBar from '@/components/shared/DisclaimerBar';
@@ -19,6 +21,8 @@ import { Sheet, SheetBody, SheetContent, SheetDescription, SheetHeader, SheetTit
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { LineageContext } from '@/hooks/useLineage';
 import { getLineage } from '@/mocks/api/lineage';
+import { useAuth } from '@/features/auth/AuthContext';
+import { useToast } from '@/components/shared/Toast';
 
 /**
  * Authenticated shell — expandable sidebar from PRD 3.4 & UI Refinement Guide,
@@ -89,6 +93,55 @@ export default function AppShell() {
 }
 
 function Sidebar({ expanded, onToggle }) {
+  const { currentUser, businessName, logout } = useAuth();
+  const { toast } = useToast();
+  const navigate = useNavigate();
+
+  const displayName = currentUser?.displayName || currentUser?.email?.split('@')[0] || 'Mark Hussain';
+  const displayEmail = currentUser?.email || 'mark@hussaincrafts.in';
+
+  // Compute initials
+  const initials = useMemo(() => {
+    if (!displayName) return 'CT';
+    const parts = displayName.trim().split(/\s+/);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[1][0]).toUpperCase();
+    }
+    return displayName.slice(0, 2).toUpperCase();
+  }, [displayName]);
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      toast({
+        title: 'Signed out',
+        description: 'You have been safely signed out of CashTwin.',
+        tone: 'healthy',
+      });
+      navigate('/login');
+    } catch (err) {
+      console.error('Logout error:', err);
+    }
+  };
+
+  const homeLink = (
+    <Link
+      to="/"
+      className={cn(
+        'group flex h-10 w-full items-center gap-3 rounded-lg px-2.5 transition-all text-body-sm font-medium',
+        'text-chalk-lo hover:bg-surface-2 hover:text-chalk-hi border border-transparent',
+      )}
+    >
+      <Home className="h-5 w-5 shrink-0 text-lime" aria-hidden="true" />
+      {expanded ? (
+        <span className="truncate flex items-center justify-between flex-1">
+          <span>Go to Homepage</span>
+          <ExternalLink className="h-3.5 w-3.5 opacity-50 group-hover:opacity-100 transition-opacity" />
+        </span>
+      ) : null}
+    </Link>
+  );
+
   return (
     <aside
       aria-label="Main"
@@ -102,14 +155,22 @@ function Sidebar({ expanded, onToggle }) {
       {/* Top Header & Brand */}
       <div className="hidden md:flex md:w-full md:flex-col md:gap-4">
         <div className="flex items-center justify-between px-1.5 py-2 border-b border-edge-dark/60 pb-3">
-          <Link to="/" className="flex items-center gap-2.5 min-w-0 overflow-hidden">
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-control bg-surface-2 border border-edge-dark">
+          <Link
+            to="/"
+            title="Go to CashTwin Homepage"
+            className="flex items-center gap-2.5 min-w-0 overflow-hidden group"
+          >
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-control bg-surface-2 border border-edge-dark group-hover:border-lime transition-colors">
               <LogoMark className="h-5 w-5" />
             </span>
             {expanded ? (
               <div className="min-w-0 flex-1">
-                <p className="font-display text-sm font-bold text-chalk-hi truncate">CashTwin</p>
-                <p className="text-[10px] text-chalk-lo truncate font-mono uppercase">Hussain Crafts</p>
+                <p className="font-display text-sm font-bold text-chalk-hi group-hover:text-lime transition-colors truncate">
+                  CashTwin
+                </p>
+                <p className="text-[10px] text-chalk-lo truncate font-mono uppercase">
+                  {businessName || 'Hussain Crafts'}
+                </p>
               </div>
             ) : null}
           </Link>
@@ -165,8 +226,23 @@ function Sidebar({ expanded, onToggle }) {
               </Tooltip>
             );
           })}
+
+          {/* Explicit Go to Homepage Link */}
+          <div className="pt-2 mt-2 border-t border-edge-dark/50">
+            {expanded ? (
+              homeLink
+            ) : (
+              <Tooltip>
+                <TooltipTrigger asChild>{homeLink}</TooltipTrigger>
+                <TooltipContent side="right" sideOffset={14} className="z-[9999] hidden md:block">
+                  Go to Homepage
+                </TooltipContent>
+              </Tooltip>
+            )}
+          </div>
         </nav>
       </div>
+
 
       {/* Mobile nav (all items horizontal) */}
       <div className="flex md:hidden w-full items-center justify-around">
@@ -194,28 +270,33 @@ function Sidebar({ expanded, onToggle }) {
         <div className="flex items-center justify-between gap-2 px-1 py-1 rounded-control bg-surface-2/60 border border-edge-dark/40">
           <div className="flex items-center gap-2.5 min-w-0 overflow-hidden">
             <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-lime/20 border border-lime/40 text-lime font-display font-bold text-xs">
-              MH
+              {initials}
             </div>
             {expanded ? (
               <div className="min-w-0 flex-1">
-                <p className="text-xs font-semibold text-chalk-hi truncate">Mark Hussain</p>
-                <p className="text-[10px] text-chalk-lo truncate font-mono">Owner</p>
+                <p className="text-xs font-semibold text-chalk-hi truncate">{displayName}</p>
+                <p className="text-[10px] text-chalk-lo truncate font-mono" title={displayEmail}>
+                  {displayEmail}
+                </p>
               </div>
             ) : null}
           </div>
 
-          <Link
-            to="/"
+          <button
+            type="button"
+            onClick={handleLogout}
             className="flex h-6 w-6 shrink-0 items-center justify-center text-chalk-lo hover:text-risk transition-colors"
-            title="Exit to marketing site"
+            title="Sign out of CashTwin"
+            aria-label="Sign out of CashTwin"
           >
             <LogOut className="h-3.5 w-3.5" />
-          </Link>
+          </button>
         </div>
       </div>
     </aside>
   );
 }
+
 
 function LineageDrawer({ open, onOpenChange, lineage }) {
   return (

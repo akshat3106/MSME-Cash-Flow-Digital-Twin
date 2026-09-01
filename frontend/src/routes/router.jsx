@@ -20,9 +20,14 @@ import TermsPage from '@/features/legal/TermsPage';
 import PrivacyPolicyPage from '@/features/legal/PrivacyPolicyPage';
 import ContactPage from '@/features/legal/ContactPage';
 
+import LoginPage from '@/features/auth/LoginPage';
+import SignupPage from '@/features/auth/SignupPage';
+import ProtectedRoute from '@/features/auth/ProtectedRoute';
+import PublicOnlyRoute from '@/features/auth/PublicOnlyRoute';
+
 /**
- * Route table. Marketing and onboarding sit outside the authenticated shell;
- * everything under /app gets the icon rail and the lineage drawer.
+ * Route table. Marketing and public auth sit outside the authenticated shell;
+ * everything under /app and /onboarding is protected by Firebase Authentication.
  */
 export const router = createBrowserRouter([
   {
@@ -34,26 +39,38 @@ export const router = createBrowserRouter([
       { path: '/contact', element: <ContactPage /> },
     ],
   },
-  { path: '/onboarding', element: <OnboardingFlow /> },
   {
-    path: '/app',
-    element: <AppShell />,
+    element: <PublicOnlyRoute />,
     children: [
-      { index: true, element: <DashboardPage /> },
-      { path: 'scenarios', element: <ScenarioSimulatorPage /> },
-      { path: 'recommendations', element: <RecommendationsPage /> },
-      { path: 'explainability', element: <ExplainabilityPage /> },
-      { path: 'invoices', element: <InvoiceReviewPage /> },
-      { path: 'statutory', element: <StatutoryPage /> },
+      { path: '/login', element: <LoginPage /> },
+      { path: '/signup', element: <SignupPage /> },
+    ],
+  },
+  {
+    element: <ProtectedRoute />,
+    children: [
+      { path: '/onboarding', element: <OnboardingFlow /> },
       {
-        path: 'settings',
-        element: <SettingsLayout />,
+        path: '/app',
+        element: <AppShell />,
         children: [
-          { index: true, element: <PrivacyConsentPage /> },
-          { path: 'audit', element: <AuditLogPage /> },
-          { path: 'profile', element: <ProfileSettingsPage /> },
-          { path: 'data-sources', element: <DataSourcesPage /> },
-          { path: 'notifications', element: <NotificationsPage /> },
+          { index: true, element: <DashboardPage /> },
+          { path: 'scenarios', element: <ScenarioSimulatorPage /> },
+          { path: 'recommendations', element: <RecommendationsPage /> },
+          { path: 'explainability', element: <ExplainabilityPage /> },
+          { path: 'invoices', element: <InvoiceReviewPage /> },
+          { path: 'statutory', element: <StatutoryPage /> },
+          {
+            path: 'settings',
+            element: <SettingsLayout />,
+            children: [
+              { index: true, element: <PrivacyConsentPage /> },
+              { path: 'audit', element: <AuditLogPage /> },
+              { path: 'profile', element: <ProfileSettingsPage /> },
+              { path: 'data-sources', element: <DataSourcesPage /> },
+              { path: 'notifications', element: <NotificationsPage /> },
+            ],
+          },
         ],
       },
     ],
@@ -61,3 +78,4 @@ export const router = createBrowserRouter([
 ]);
 
 export default router;
+

@@ -3,12 +3,12 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import cn from '@/lib/cn';
-import DisclaimerBar from '@/components/shared/DisclaimerBar';
 import SmoothScrollProvider from '@/components/shared/SmoothScrollProvider';
 import TermsModal from '@/features/legal/TermsModal';
 import PrivacyPolicyModal from '@/features/legal/PrivacyPolicyModal';
 import ContactModal from '@/features/legal/ContactModal';
-import { LogoMark } from './AppShell';
+import { useAuth } from '@/features/auth/AuthContext';
+
 
 /**
  * Marketing shell — sticky dark top nav with spotlight hover/active tracking,
@@ -43,6 +43,7 @@ export function CashTwinLogo({ className = 'h-5 w-5' }) {
 }
 
 export default function MarketingLayout() {
+  const { currentUser } = useAuth();
   const [menuOpen, setMenuOpen] = useState(false);
   const [termsModalOpen, setTermsModalOpen] = useState(false);
   const [privacyModalOpen, setPrivacyModalOpen] = useState(false);
@@ -226,21 +227,32 @@ export default function MarketingLayout() {
               </div>
             </div>
 
-            {/* Right Action buttons: "Get started" black pill and "Sign in" */}
+            {/* Right Action buttons */}
             <div className="flex items-center gap-4">
-              <Link
-                to="/onboarding"
-                className="hidden sm:inline-flex items-center justify-center rounded-full bg-[#0D1720] px-5 py-2.5 text-[14px] font-medium text-white shadow-sm transition-all hover:bg-[#1A2530]"
-              >
-                Get started
-              </Link>
+              {currentUser ? (
+                <Link
+                  to="/app"
+                  className="inline-flex items-center justify-center rounded-full bg-[#0D1720] px-5 py-2.5 text-[14px] font-medium text-white shadow-sm transition-all hover:bg-[#1A2530]"
+                >
+                  Open Dashboard
+                </Link>
+              ) : (
+                <>
+                  <Link
+                    to="/signup"
+                    className="hidden sm:inline-flex items-center justify-center rounded-full bg-[#0D1720] px-5 py-2.5 text-[14px] font-medium text-white shadow-sm transition-all hover:bg-[#1A2530]"
+                  >
+                    Get started
+                  </Link>
 
-              <Link
-                to="/app"
-                className="inline-flex items-center justify-center px-3 py-2 text-[14px] font-medium text-[#0D1720] hover:text-[#00b074] transition-colors"
-              >
-                Sign in
-              </Link>
+                  <Link
+                    to="/login"
+                    className="inline-flex items-center justify-center px-3 py-2 text-[14px] font-medium text-[#0D1720] hover:text-[#00b074] transition-colors"
+                  >
+                    Sign in
+                  </Link>
+                </>
+              )}
 
               <button
                 type="button"
@@ -253,6 +265,7 @@ export default function MarketingLayout() {
               </button>
             </div>
           </nav>
+
 
           {/* Mobile menu drawer */}
           <AnimatePresence>
@@ -295,11 +308,11 @@ export default function MarketingLayout() {
                 </ul>
                 <div className="pt-3 border-t border-edge-dark mt-2">
                   <Link
-                    to="/app"
+                    to={currentUser ? "/app" : "/login"}
                     onClick={() => setMenuOpen(false)}
                     className="flex w-full items-center justify-center rounded-lg bg-surface border border-edge-dark py-2.5 text-xs font-semibold text-[#0D1720] hover:bg-surface-2 transition-all"
                   >
-                    Sign in
+                    {currentUser ? 'Open Dashboard' : 'Sign in'}
                   </Link>
                 </div>
               </motion.div>
