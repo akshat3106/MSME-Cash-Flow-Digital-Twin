@@ -30,6 +30,14 @@ AI_models/tests/
 AI_models/data/processed/
 AI_models/evaluation/
 
+# Per-business training artifacts - see .gcloudignore for why these are
+# excluded from the build context entirely (534MB in models/businesses/
+# alone, none of it reachable by the running service).
+AI_models/models/businesses/
+AI_models/data/raw/businesses/
+AI_models/data/raw/all_businesses.csv
+AI_models/.demo_backup/
+
 # Local scratch output
 AI_models/*.joblib.bak
 AI_models/forecast_test*.json

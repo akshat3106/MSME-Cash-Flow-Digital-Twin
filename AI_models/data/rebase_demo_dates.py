@@ -71,6 +71,12 @@ CLOSED_NEWEST_DAYS_AGO = 30
 
 OPEN_STATUSES = ["open", "disputed_open"]
 
+# Not every one of these exists in every dataset. The three P10/P50/P90
+# columns belong to an older schema that carried Model 1's predictions in
+# the CSV itself; the current invoices.csv does not have them, and
+# addressing a missing column raised KeyError and took the whole script
+# down. They stay listed so that a dataset which DOES carry them still has
+# them rebased - see the filter in rebase().
 DATE_COLUMNS = [
     "issue_date",
     "due_date",
@@ -83,14 +89,16 @@ DATE_COLUMNS = [
 
 def rebase(df: pd.DataFrame, today: date) -> pd.DataFrame:
     df = df.copy()
-    for col in DATE_COLUMNS:
+
+    date_columns = [col for col in DATE_COLUMNS if col in df.columns]
+    for col in date_columns:
         df[col] = pd.to_datetime(df[col], errors="coerce")
 
     # Capture each derived date's offset from its own issue_date BEFORE moving
     # anything, so they can be rebuilt against the new issue_date afterwards.
     offsets = {
         col: (df[col] - df["issue_date"]).dt.days
-        for col in DATE_COLUMNS
+        for col in date_columns
         if col != "issue_date"
     }
 
@@ -125,7 +133,7 @@ def rebase(df: pd.DataFrame, today: date) -> pd.DataFrame:
     for col, offset in offsets.items():
         df[col] = df["issue_date"] + pd.to_timedelta(offset, unit="D")
 
-    for col in DATE_COLUMNS:
+    for col in date_columns:
         df[col] = df[col].dt.strftime("%Y-%m-%d")
 
     return df

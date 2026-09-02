@@ -31,3 +31,13 @@ model_2_input.json
 model_7_output.json
 riskgraph_test.json
 *.joblib.bak
+
+# Per-business trained models (train_model1.py --all-businesses).
+# ~534MB of RandomForests, with single files up to 60MB - too large to
+# commit, and fully regenerable from the seeded generator plus the
+# training script. The metrics table they produce
+# (evaluation/model1_per_business_metrics.csv) IS committed; that is the
+# actual result. models/ itself - the demo business's artifacts, which
+# the API loads at startup - stays tracked.
+models/businesses/
+.demo_backup/

@@ -66,26 +66,32 @@ export const REQUIRED_INVOICE_COLUMNS = [
 // Demo business parameters - see module docstring. Override with real
 // figures once a real business's opening cash / daily burn is known.
 //
-// DAILY_EXPENSE was 150_000, which burned faster than this dataset's
-// receivables could ever cover: cash fell to roughly -1_500_000 by day 30
-// and breach probability pinned at 100% for the whole horizon. A cash
-// balance that goes deeply negative isn't a forecast any real business can
-// have (it defaults first), and a flat 100% reads as a broken gauge rather
-// than a finding.
+// These are SWEPT, not chosen, and they are specific to whichever dataset
+// the demo is pointed at. Re-run the sweep whenever that changes:
 //
-// 95_000 was picked by sweeping this value against the simulation on the
-// rebased dataset (see AI_models/data/rebase_demo_dates.py). It breaches the
-// minimum buffer around day 25 of the 30-day horizon - late enough that the
-// forecast shows a real decline, early enough that the breach is on screen -
-// while cash bottoms out near 640_000 (positive throughout) and peak breach
-// probability lands near 0.83 rather than a saturated 1.00.
+//     cd AI_models && uv run python data/sweep_demo_params.py --business B015
 //
-// Re-sweep this if the dataset or Model 1's intervals change: the widened
-// cold-start bands alone moved the breach day by four and turned an earlier
-// 80_000 pick into no breach at all.
-export const DEFAULT_OPENING_CASH = Number(process.env.DEMO_OPENING_CASH ?? 2_000_000);
-export const DEFAULT_DAILY_EXPENSE = Number(process.env.DEMO_DAILY_EXPENSE ?? 95_000);
-export const DEFAULT_MIN_BUFFER = Number(process.env.DEMO_MIN_BUFFER ?? 1_000_000);
+// Current dataset: business B015 of the generated set - 6,143 invoices,
+// 230 customers, 491 open worth ~7.0 crore. Its expected inflow inside the
+// 30-day horizon is heavily BACK-LOADED: only ~28 lakh arrives by day 18,
+// then ~80 lakh more lands between day 18 and day 30. So the forecast's
+// natural shape is a dip that recovers, and the burn rate has to be tuned
+// against the trough rather than against the average.
+//
+// At 340_000/day cash troughs near 15.7 lakh on day 19, crosses the 20 lakh
+// buffer around day 17, and recovers to ~55.6 lakh by day 30, with peak
+// breach probability near 0.82. Neighbouring values fail in the two ways
+// the previous dataset's tuning also had to avoid: 280_000 produces no
+// breach at all (a flat, storyless line), while 360_000 pins breach
+// probability at 0.95+ and a saturated gauge reads as broken rather than as
+// a finding.
+//
+// The previous single-business dataset used 2_000_000 / 95_000 / 1_000_000.
+// Those figures do not transfer - its receivables were an order of
+// magnitude smaller.
+export const DEFAULT_OPENING_CASH = Number(process.env.DEMO_OPENING_CASH ?? 5_000_000);
+export const DEFAULT_DAILY_EXPENSE = Number(process.env.DEMO_DAILY_EXPENSE ?? 340_000);
+export const DEFAULT_MIN_BUFFER = Number(process.env.DEMO_MIN_BUFFER ?? 2_000_000);
 export const DEFAULT_N_SIMS = Number(process.env.DEMO_N_SIMS ?? 3000);
 
 // Risk graph stays demo-legible instead of rendering the entire overdue

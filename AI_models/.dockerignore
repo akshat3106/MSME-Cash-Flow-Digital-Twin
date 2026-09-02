@@ -14,6 +14,16 @@ __pycache__/
 notebook/
 tests/
 data/processed/
+evaluation/
+
+# Per-business training artifacts - this Space serves ONE business at a
+# time from invoices.csv + models/ (whichever is currently swapped into
+# place); it never reads the other 17 businesses' models or CSVs. Without
+# this, the build context includes ~600MB nothing in the image can reach.
+models/businesses/
+data/raw/businesses/
+data/raw/all_businesses.csv
+.demo_backup/
 
 # Local scratch output
 *.joblib.bak

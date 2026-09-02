@@ -18,3 +18,14 @@ AI_models/notebook/
 AI_models/tests/
 AI_models/data/processed/
 AI_models/evaluation/
+
+# Per-business training artifacts (train_model1.py --all-businesses /
+# generate_invoices.py). Cloud Run serves ONE business at a time from
+# AI_models/invoices.csv + AI_models/models/ (whichever is currently
+# swapped into place) - it never reads models/businesses/ or the other 17
+# businesses' CSVs. Without this, `gcloud builds submit` uploads ~600MB of
+# files the deployed service can never reach.
+AI_models/models/businesses/
+AI_models/data/raw/businesses/
+AI_models/data/raw/all_businesses.csv
+AI_models/.demo_backup/

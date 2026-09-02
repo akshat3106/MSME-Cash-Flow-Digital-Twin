@@ -32,7 +32,42 @@ export default function RiskBreakdownRow({ concentration, behaviour, buffer, min
 
 const BAR_TONES = ['bg-risk', 'bg-caution', 'bg-info', 'bg-lime', 'bg-chalk-lo'];
 
+// The API returns EVERY customer holding an outstanding invoice, sorted by
+// amount. That is the right payload - the question "where do my receivables
+// sit" is answered by the top few, but the tail has to be counted somewhere
+// or the percentages stop adding up.
+//
+// It is not a list to render in full. A business with a couple of hundred
+// active customers turned this card into a several-thousand-pixel column of
+// near-identical 1% rows that buried every other panel on the dashboard, and
+// answered nothing: concentration risk is about whether a FEW customers hold
+// the money, so the tail is one fact ("the other 185 hold 71%"), not 185.
+//
+// Four named rows plus a rolled-up remainder is also what BAR_TONES was
+// built for - five tones, the last a muted grey that reads as "everyone
+// else" rather than as a fifth highlighted customer.
+const NAMED_ROWS = 4;
+
+function foldTail(rows) {
+  if (!rows || rows.length <= NAMED_ROWS + 1) return rows ?? [];
+
+  const named = rows.slice(0, NAMED_ROWS);
+  const tail = rows.slice(NAMED_ROWS);
+
+  return [
+    ...named,
+    {
+      id: '__other__',
+      name: `Other customers (${tail.length})`,
+      amount: tail.reduce((sum, row) => sum + row.amount, 0),
+      pct: tail.reduce((sum, row) => sum + row.pct, 0),
+    },
+  ];
+}
+
 function ConcentrationCard({ rows }) {
+  const display = foldTail(rows);
+
   return (
     <Card as="section" className="w-full">
       <EyebrowLabel tone="watch">Customer concentration</EyebrowLabel>
@@ -41,7 +76,7 @@ function ConcentrationCard({ rows }) {
       </h3>
 
       <div className="mt-5 flex h-2.5 w-full overflow-hidden" role="presentation">
-        {rows.map((row, i) => (
+        {display.map((row, i) => (
           <span
             key={row.id}
             className={cn(BAR_TONES[i % BAR_TONES.length])}
@@ -51,7 +86,7 @@ function ConcentrationCard({ rows }) {
       </div>
 
       <ul className="mt-5 space-y-2.5">
-        {rows.map((row, i) => (
+        {display.map((row, i) => (
           <li key={row.id} className="flex items-center gap-2.5 text-body-sm">
             <span
               className={cn('h-2 w-2 shrink-0', BAR_TONES[i % BAR_TONES.length])}

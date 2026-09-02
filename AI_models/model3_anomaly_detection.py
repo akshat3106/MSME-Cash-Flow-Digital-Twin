@@ -1,6 +1,33 @@
 """
-MODEL 3 — Anomaly & Volatility Detection
-MSME Cash-Flow Digital Twin | AI/ML Module
+MODEL 3 — Anomaly & Volatility Detection  [STANDALONE PROTOTYPE — NOT THE
+SERVED IMPLEMENTATION]
+
+>>> READ THIS FIRST <<<
+
+This file is an early self-contained prototype. Nothing imports it, and it
+is NOT what runs in the application. It generates its own 300-row toy
+transaction table to demonstrate the technique in isolation.
+
+The Model 3 that actually serves /detect-anomalies/closed and
+/detect-anomalies/open is:
+
+    api/anomaly_api.py              endpoints, mounted into main.py
+    anomaly/features_closed.py      deviation features for closed invoices
+    anomaly/features_open.py        deviation features for open invoices
+    anomaly/isolation_forest_detector.py
+    anomaly/anomaly_explainer.py    turns scores into named anomaly types
+
+Those read the real invoice dataset (data/raw/invoices.csv, or whatever
+MODEL1_DATA_PATH points at) - tens of thousands of invoices, not 300 - and
+build features as DEVIATIONS from each customer's and sector's own
+baseline rather than raw amounts.
+
+Kept for reference because it documents the z-score + Isolation Forest
+combination clearly. If you are judging the dataset size or the feature
+design of Model 3, read anomaly/ instead: the numbers here are a toy.
+
+---
+
 Flags unusual expenses/payments per business using:
   1. Rolling z-score baseline (fast, explainable first pass)
   2. Isolation Forest (unsupervised, multivariate anomaly detection)

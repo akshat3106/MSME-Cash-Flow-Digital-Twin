@@ -1,0 +1,799 @@
+invoice_id,business_id,cust_number,customer_name,sector,payment_term_days,invoice_amount,issue_date,due_date,status,actual_paid_date,days_to_payment,delay_vs_due_date,had_partial_payment_flag,is_big_ticket_spike,customer_archetype_TRUE_LABEL
+INV1000001,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,21576.78,2024-07-26,2024-08-10,closed,2024-08-13,18,3,False,False,average_payer
+INV1000002,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,47152.72,2024-09-02,2024-09-17,closed,2024-09-17,15,0,False,False,average_payer
+INV1000003,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,44956.19,2024-10-04,2024-10-19,closed,2024-10-25,21,6,False,False,average_payer
+INV1000004,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,28084.04,2024-11-08,2024-11-23,closed,2024-11-25,17,2,False,False,average_payer
+INV1000005,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,70863.24,2024-11-17,2024-12-02,closed,2024-12-12,25,10,False,False,average_payer
+INV1000006,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,27649.17,2024-11-21,2024-12-06,closed,2024-12-09,18,3,False,False,average_payer
+INV1000007,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,24119.33,2025-02-20,2025-03-07,closed,2025-03-10,18,3,False,False,average_payer
+INV1000008,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,23184.48,2025-03-01,2025-03-16,closed,2025-04-01,31,16,False,False,average_payer
+INV1000009,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,40229.15,2025-03-28,2025-04-12,closed,2025-04-13,16,1,False,False,average_payer
+INV1000010,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,143365.18,2025-04-25,2025-05-10,closed,2025-05-05,10,-5,False,True,average_payer
+INV1000011,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,45562.86,2025-10-12,2025-10-27,closed,2025-11-04,23,8,False,False,average_payer
+INV1000012,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,36074.73,2026-01-21,2026-02-05,closed,2026-01-28,7,-8,False,False,average_payer
+INV1000013,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,31280.6,2026-04-16,2026-05-01,closed,2026-05-08,22,7,False,False,average_payer
+INV1000014,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,51399.58,2026-05-27,2026-06-11,closed,2026-06-23,27,12,False,False,average_payer
+INV1000015,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,30493.85,2026-07-23,2026-08-07,closed,2026-08-13,21,6,False,False,average_payer
+INV1000016,B001,B001-C1001,Metal Client 001,Metal & Engineering,15,27767.01,2026-08-01,2026-08-16,closed,2026-08-22,21,6,False,False,average_payer
+INV1000017,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,100266.82,2024-03-24,2024-04-23,closed,2024-04-22,29,-1,False,False,prompt_payer
+INV1000018,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,78174.5,2024-04-19,2024-05-19,closed,2024-05-21,32,2,False,False,prompt_payer
+INV1000019,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,108649.06,2024-04-22,2024-05-22,closed,2024-05-22,30,0,False,False,prompt_payer
+INV1000020,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,104254.83,2024-05-12,2024-06-11,closed,2024-06-08,27,-3,True,False,prompt_payer
+INV1000021,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,53439.18,2024-06-03,2024-07-03,closed,2024-06-28,25,-5,False,False,prompt_payer
+INV1000022,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,86781.67,2024-06-11,2024-07-11,closed,2024-07-14,33,3,False,False,prompt_payer
+INV1000023,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,55871.9,2024-06-13,2024-07-13,closed,2024-07-19,36,6,False,False,prompt_payer
+INV1000024,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,74102.24,2024-06-14,2024-07-14,closed,2024-07-11,27,-3,False,False,prompt_payer
+INV1000025,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,85888.63,2024-07-24,2024-08-23,closed,2024-08-24,31,1,False,False,prompt_payer
+INV1000026,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,142549.73,2024-07-29,2024-08-28,closed,2024-08-23,25,-5,False,False,prompt_payer
+INV1000027,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,45088.73,2024-08-06,2024-09-05,closed,2024-09-03,28,-2,False,False,prompt_payer
+INV1000028,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,76451.68,2024-08-18,2024-09-17,closed,2024-09-15,28,-2,False,False,prompt_payer
+INV1000029,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,104410.2,2024-08-31,2024-09-30,closed,2024-09-26,26,-4,False,False,prompt_payer
+INV1000030,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,103937.66,2024-10-03,2024-11-02,closed,2024-11-01,29,-1,False,False,prompt_payer
+INV1000031,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,109823.99,2024-11-11,2024-12-11,closed,2024-12-14,33,3,False,False,prompt_payer
+INV1000032,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,63148.04,2024-11-11,2024-12-11,closed,2024-12-13,32,2,False,False,prompt_payer
+INV1000033,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,81843.9,2024-11-27,2024-12-27,closed,2024-12-25,28,-2,False,False,prompt_payer
+INV1000034,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,74055.31,2024-12-14,2025-01-13,closed,2025-01-18,35,5,False,False,prompt_payer
+INV1000035,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,126047.84,2025-02-12,2025-03-14,closed,2025-03-14,30,0,False,False,prompt_payer
+INV1000036,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,81633.8,2025-03-26,2025-04-25,closed,2025-05-01,36,6,False,False,prompt_payer
+INV1000037,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,85541.32,2025-04-05,2025-05-05,closed,2025-04-30,25,-5,False,False,prompt_payer
+INV1000038,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,90097.72,2025-04-07,2025-05-07,closed,2025-05-17,40,10,False,False,prompt_payer
+INV1000039,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,57440.3,2025-04-27,2025-05-27,closed,2025-05-26,29,-1,False,False,prompt_payer
+INV1000040,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,99371.01,2025-05-20,2025-06-19,closed,2025-06-14,25,-5,False,False,prompt_payer
+INV1000041,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,61066.62,2025-05-25,2025-06-24,closed,2025-06-20,26,-4,True,False,prompt_payer
+INV1000042,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,89884.7,2025-06-01,2025-07-01,closed,2025-07-04,33,3,False,False,prompt_payer
+INV1000043,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,68438.66,2025-06-09,2025-07-09,closed,2025-07-12,33,3,False,False,prompt_payer
+INV1000044,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,121883.58,2025-06-16,2025-07-16,closed,2025-07-19,33,3,False,False,prompt_payer
+INV1000045,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,86051.92,2025-07-11,2025-08-10,closed,2025-08-12,32,2,False,False,prompt_payer
+INV1000046,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,151845.65,2025-07-13,2025-08-12,closed,2025-08-08,26,-4,False,False,prompt_payer
+INV1000047,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,43526.96,2025-07-25,2025-08-24,closed,2025-08-23,29,-1,False,False,prompt_payer
+INV1000048,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,128416.96,2025-08-03,2025-09-02,closed,2025-08-24,21,-9,False,False,prompt_payer
+INV1000049,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,110120.84,2025-08-12,2025-09-11,closed,2025-09-08,27,-3,False,False,prompt_payer
+INV1000050,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,92883.02,2025-08-16,2025-09-15,closed,2025-09-17,32,2,False,False,prompt_payer
+INV1000051,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,164966.86,2025-09-13,2025-10-13,closed,2025-10-06,23,-7,False,False,prompt_payer
+INV1000052,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,55432.3,2025-10-23,2025-11-22,closed,2025-11-30,38,8,False,False,prompt_payer
+INV1000053,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,90681.72,2025-11-16,2025-12-16,closed,2025-12-20,34,4,False,False,prompt_payer
+INV1000054,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,123685.94,2025-11-17,2025-12-17,closed,2025-12-13,26,-4,False,False,prompt_payer
+INV1000055,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,102078.3,2026-01-16,2026-02-15,closed,2026-02-17,32,2,False,False,prompt_payer
+INV1000056,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,75945.92,2026-01-17,2026-02-16,closed,2026-02-18,32,2,False,False,prompt_payer
+INV1000057,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,103333.99,2026-01-23,2026-02-22,closed,2026-02-21,29,-1,False,False,prompt_payer
+INV1000058,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,263061.68,2026-01-27,2026-02-26,closed,2026-02-28,32,2,False,True,prompt_payer
+INV1000059,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,76811.69,2026-02-26,2026-03-28,closed,2026-03-27,29,-1,False,False,prompt_payer
+INV1000060,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,233113.53,2026-04-18,2026-05-18,closed,2026-05-18,30,0,False,True,prompt_payer
+INV1000061,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,116729.45,2026-04-30,2026-05-30,closed,2026-06-01,32,2,False,False,prompt_payer
+INV1000062,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,93431.04,2026-05-16,2026-06-15,closed,2026-06-16,31,1,True,False,prompt_payer
+INV1000063,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,181002.71,2026-06-06,2026-07-06,closed,2026-07-07,31,1,False,False,prompt_payer
+INV1000064,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,109690.74,2026-06-16,2026-07-16,closed,2026-07-17,31,1,False,False,prompt_payer
+INV1000065,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,54519.41,2026-06-17,2026-07-17,closed,2026-07-20,33,3,False,False,prompt_payer
+INV1000066,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,108239.88,2026-06-21,2026-07-21,closed,2026-07-24,33,3,False,False,prompt_payer
+INV1000067,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,61371.15,2026-07-06,2026-08-05,closed,2026-08-01,26,-4,False,False,prompt_payer
+INV1000068,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,78314.26,2026-07-22,2026-08-21,closed,2026-08-18,27,-3,False,False,prompt_payer
+INV1000069,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,88758.7,2026-07-29,2026-08-28,closed,2026-09-02,35,5,False,False,prompt_payer
+INV1000070,B001,B001-C1002,FMCG Client 002,FMCG & Food Processing,30,61342.11,2026-08-18,2026-09-17,disputed_open,,,,False,False,prompt_payer
+INV1000071,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,81438.51,2024-03-22,2024-04-21,closed,2024-05-02,41,11,False,False,seasonal_payer
+INV1000072,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,76563.44,2024-03-28,2024-04-27,closed,2024-04-28,31,1,False,False,seasonal_payer
+INV1000073,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,64295.55,2024-04-04,2024-05-04,closed,2024-05-12,38,8,False,False,seasonal_payer
+INV1000074,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,66118.41,2024-04-08,2024-05-08,closed,2024-05-15,37,7,False,False,seasonal_payer
+INV1000075,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,68486.15,2024-04-17,2024-05-17,closed,2024-05-23,36,6,False,False,seasonal_payer
+INV1000076,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,54563.38,2024-05-13,2024-06-12,closed,2024-06-21,39,9,False,False,seasonal_payer
+INV1000077,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,230448.45,2024-05-27,2024-06-26,closed,2024-07-12,46,16,False,True,seasonal_payer
+INV1000078,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,34708.17,2024-06-13,2024-07-13,closed,2024-07-30,47,17,False,False,seasonal_payer
+INV1000079,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,21995.49,2024-06-19,2024-07-19,closed,2024-08-07,49,19,False,False,seasonal_payer
+INV1000080,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,69729.34,2024-06-26,2024-07-26,closed,2024-08-19,54,24,False,False,seasonal_payer
+INV1000081,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,68168.95,2024-07-01,2024-07-31,closed,2024-08-15,45,15,False,False,seasonal_payer
+INV1000082,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,49647.75,2024-08-14,2024-09-13,closed,2024-09-29,46,16,False,False,seasonal_payer
+INV1000083,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,43866.82,2024-08-23,2024-09-22,closed,2024-10-06,44,14,False,False,seasonal_payer
+INV1000084,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,90119.84,2024-09-03,2024-10-03,closed,2024-10-04,31,1,False,False,seasonal_payer
+INV1000085,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,51979.21,2024-09-12,2024-10-12,closed,2024-10-16,34,4,False,False,seasonal_payer
+INV1000086,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,50581.52,2024-09-25,2024-10-25,closed,2024-11-07,43,13,False,False,seasonal_payer
+INV1000087,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,45341.29,2024-10-30,2024-11-29,closed,2024-12-04,35,5,False,False,seasonal_payer
+INV1000088,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,77027.75,2024-11-16,2024-12-16,closed,2024-12-20,34,4,False,False,seasonal_payer
+INV1000089,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,31225.62,2024-12-06,2025-01-05,closed,2024-12-30,24,-6,False,False,seasonal_payer
+INV1000090,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,57271.56,2024-12-08,2025-01-07,closed,2025-01-11,34,4,True,False,seasonal_payer
+INV1000091,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,48906.46,2024-12-18,2025-01-17,closed,2025-01-18,31,1,False,False,seasonal_payer
+INV1000092,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,58044.21,2024-12-23,2025-01-22,closed,2025-01-26,34,4,False,False,seasonal_payer
+INV1000093,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,74063.09,2024-12-27,2025-01-26,closed,2025-01-30,34,4,False,False,seasonal_payer
+INV1000094,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,52371.3,2025-01-18,2025-02-17,closed,2025-02-10,23,-7,False,False,seasonal_payer
+INV1000095,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,55787.18,2025-01-31,2025-03-02,closed,2025-03-11,39,9,False,False,seasonal_payer
+INV1000096,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,34588.59,2025-03-19,2025-04-18,closed,2025-04-17,29,-1,False,False,seasonal_payer
+INV1000097,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,51413.15,2025-03-22,2025-04-21,closed,2025-04-26,35,5,False,False,seasonal_payer
+INV1000098,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,44142.68,2025-03-25,2025-04-24,closed,2025-04-28,34,4,True,False,seasonal_payer
+INV1000099,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,64949.02,2025-03-26,2025-04-25,closed,2025-05-07,42,12,False,False,seasonal_payer
+INV1000100,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,56461.43,2025-03-29,2025-04-28,closed,2025-05-05,37,7,False,False,seasonal_payer
+INV1000101,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,53090.64,2025-05-25,2025-06-24,closed,2025-07-12,48,18,False,False,seasonal_payer
+INV1000102,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,63508.26,2025-06-04,2025-07-04,closed,2025-07-19,45,15,False,False,seasonal_payer
+INV1000103,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,46258.0,2025-06-16,2025-07-16,closed,2025-07-30,44,14,False,False,seasonal_payer
+INV1000104,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,43103.96,2025-06-26,2025-07-26,closed,2025-08-04,39,9,False,False,seasonal_payer
+INV1000105,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,119151.0,2025-07-04,2025-08-03,closed,2025-08-14,41,11,False,True,seasonal_payer
+INV1000106,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,59218.79,2025-07-25,2025-08-24,closed,2025-09-07,44,14,False,False,seasonal_payer
+INV1000107,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,60447.98,2025-08-10,2025-09-09,closed,2025-09-23,44,14,False,False,seasonal_payer
+INV1000108,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,59459.09,2025-08-16,2025-09-15,closed,2025-09-24,39,9,False,False,seasonal_payer
+INV1000109,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,50763.26,2025-09-22,2025-10-22,closed,2025-11-09,48,18,False,False,seasonal_payer
+INV1000110,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,82680.99,2025-10-16,2025-11-15,closed,2025-11-24,39,9,False,False,seasonal_payer
+INV1000111,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,48290.32,2025-10-21,2025-11-20,closed,2025-11-21,31,1,False,False,seasonal_payer
+INV1000112,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,103209.49,2025-10-21,2025-11-20,closed,2025-12-06,46,16,False,False,seasonal_payer
+INV1000113,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,55412.72,2025-11-04,2025-12-04,closed,2025-11-29,25,-5,False,False,seasonal_payer
+INV1000114,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,47180.63,2026-01-06,2026-02-05,closed,2026-02-10,35,5,False,False,seasonal_payer
+INV1000115,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,53621.07,2026-02-03,2026-03-05,closed,2026-03-06,31,1,False,False,seasonal_payer
+INV1000116,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,59008.98,2026-03-01,2026-03-31,closed,2026-04-15,45,15,False,False,seasonal_payer
+INV1000117,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,67599.25,2026-03-06,2026-04-05,closed,2026-04-16,41,11,False,False,seasonal_payer
+INV1000118,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,105856.83,2026-03-26,2026-04-25,closed,2026-04-25,30,0,False,False,seasonal_payer
+INV1000119,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,62860.62,2026-04-30,2026-05-30,closed,2026-06-14,45,15,False,False,seasonal_payer
+INV1000120,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,74668.73,2026-05-31,2026-06-30,closed,2026-06-30,30,0,False,False,seasonal_payer
+INV1000121,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,79439.72,2026-07-07,2026-08-06,closed,2026-08-25,49,19,False,False,seasonal_payer
+INV1000122,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,68789.38,2026-08-24,2026-09-23,open,,,,False,False,seasonal_payer
+INV1000123,B001,B001-C1003,Textiles Client 003,Textiles & Apparel,30,107246.86,2026-08-27,2026-09-26,disputed_open,,,,False,False,seasonal_payer
+INV1000124,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,114340.16,2024-07-23,2024-08-22,closed,2024-08-26,34,4,False,False,erratic_payer
+INV1000125,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,170775.92,2024-08-05,2024-09-04,closed,2024-11-20,107,77,False,False,erratic_payer
+INV1000126,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,100425.58,2024-09-04,2024-10-04,closed,2024-10-09,35,5,False,False,erratic_payer
+INV1000127,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,144320.09,2024-10-01,2024-10-31,closed,2025-01-18,109,79,False,False,erratic_payer
+INV1000128,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,308530.81,2025-01-02,2025-02-01,closed,2025-03-03,60,30,False,True,erratic_payer
+INV1000129,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,108653.35,2025-01-28,2025-02-27,closed,2025-03-18,49,19,False,False,erratic_payer
+INV1000130,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,134001.19,2025-04-18,2025-05-18,closed,2025-05-22,34,4,False,False,erratic_payer
+INV1000131,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,161193.15,2025-04-20,2025-05-20,closed,2025-07-09,80,50,False,False,erratic_payer
+INV1000132,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,112158.27,2025-06-04,2025-07-04,closed,2025-06-27,23,-7,False,False,erratic_payer
+INV1000133,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,171188.49,2025-07-16,2025-08-15,open,,,,False,False,erratic_payer
+INV1000134,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,82933.48,2025-08-03,2025-09-02,closed,2025-09-10,38,8,False,False,erratic_payer
+INV1000135,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,122571.34,2025-10-23,2025-11-22,closed,2025-11-16,24,-6,False,False,erratic_payer
+INV1000136,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,137011.52,2025-11-25,2025-12-25,closed,2026-01-14,50,20,False,False,erratic_payer
+INV1000137,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,80889.2,2026-01-03,2026-02-02,open,,,,False,False,erratic_payer
+INV1000138,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,856448.21,2026-04-20,2026-05-20,open,,,,False,True,erratic_payer
+INV1000139,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,141498.9,2026-06-10,2026-07-10,closed,2026-07-15,35,5,False,False,erratic_payer
+INV1000140,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,92992.51,2026-07-12,2026-08-11,open,,,,False,False,erratic_payer
+INV1000141,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,153048.95,2026-07-28,2026-08-27,open,,,,False,False,erratic_payer
+INV1000142,B001,B001-C1004,Chemicals Client 004,Chemicals & Plastics,30,100844.62,2026-08-29,2026-09-28,open,,,,False,False,erratic_payer
+INV1000143,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,146520.48,2024-04-18,2024-05-18,closed,2024-05-20,32,2,False,False,prompt_payer
+INV1000144,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,193961.76,2024-05-08,2024-06-07,closed,2024-06-05,28,-2,False,False,prompt_payer
+INV1000145,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,269476.31,2024-05-12,2024-06-11,closed,2024-06-10,29,-1,False,False,prompt_payer
+INV1000146,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,106083.81,2024-06-17,2024-07-17,closed,2024-07-19,32,2,False,False,prompt_payer
+INV1000147,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,111298.13,2024-06-21,2024-07-21,closed,2024-07-21,30,0,False,False,prompt_payer
+INV1000148,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,187672.75,2024-07-14,2024-08-13,closed,2024-08-13,30,0,False,False,prompt_payer
+INV1000149,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,261774.29,2024-07-18,2024-08-17,closed,2024-08-20,33,3,False,False,prompt_payer
+INV1000150,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,209696.74,2024-07-27,2024-08-26,closed,2024-08-23,27,-3,False,False,prompt_payer
+INV1000151,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,202058.91,2024-08-11,2024-09-10,closed,2024-09-12,32,2,False,False,prompt_payer
+INV1000152,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,118337.67,2024-08-15,2024-09-14,closed,2024-09-18,34,4,False,False,prompt_payer
+INV1000153,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,176304.34,2024-08-16,2024-09-15,closed,2024-09-15,30,0,False,False,prompt_payer
+INV1000154,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,189984.5,2024-09-02,2024-10-02,closed,2024-10-02,30,0,False,False,prompt_payer
+INV1000155,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,600460.55,2024-10-01,2024-10-31,closed,2024-10-27,26,-4,False,True,prompt_payer
+INV1000156,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,178561.63,2024-10-06,2024-11-05,closed,2024-11-04,29,-1,False,False,prompt_payer
+INV1000157,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,204340.65,2024-11-07,2024-12-07,closed,2024-12-05,28,-2,False,False,prompt_payer
+INV1000158,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,78500.78,2024-12-31,2025-01-30,closed,2025-02-02,33,3,False,False,prompt_payer
+INV1000159,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,88452.29,2025-01-14,2025-02-13,closed,2025-02-12,29,-1,False,False,prompt_payer
+INV1000160,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,114060.98,2025-01-21,2025-02-20,closed,2025-02-19,29,-1,False,False,prompt_payer
+INV1000161,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,167259.92,2025-03-22,2025-04-21,closed,2025-04-25,34,4,False,False,prompt_payer
+INV1000162,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,145011.01,2025-03-28,2025-04-27,closed,2025-04-27,30,0,False,False,prompt_payer
+INV1000163,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,109241.9,2025-04-01,2025-05-01,closed,2025-05-03,32,2,False,False,prompt_payer
+INV1000164,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,264972.92,2025-04-06,2025-05-06,closed,2025-05-05,29,-1,False,False,prompt_payer
+INV1000165,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,153136.73,2025-06-03,2025-07-03,closed,2025-07-04,31,1,False,False,prompt_payer
+INV1000166,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,172871.71,2025-06-19,2025-07-19,closed,2025-07-18,29,-1,False,False,prompt_payer
+INV1000167,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,215687.72,2025-06-24,2025-07-24,closed,2025-07-28,34,4,False,False,prompt_payer
+INV1000168,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,308776.35,2025-06-29,2025-07-29,closed,2025-07-30,31,1,False,False,prompt_payer
+INV1000169,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,160102.69,2025-07-08,2025-08-07,closed,2025-08-02,25,-5,False,False,prompt_payer
+INV1000170,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,606901.2,2025-07-23,2025-08-22,closed,2025-08-20,28,-2,False,True,prompt_payer
+INV1000171,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,112172.68,2025-12-26,2026-01-25,closed,2026-01-20,25,-5,False,False,prompt_payer
+INV1000172,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,160661.9,2026-01-02,2026-02-01,closed,2026-02-03,32,2,False,False,prompt_payer
+INV1000173,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,111656.89,2026-02-02,2026-03-04,closed,2026-03-07,33,3,False,False,prompt_payer
+INV1000174,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,142250.84,2026-02-10,2026-03-12,closed,2026-03-13,31,1,False,False,prompt_payer
+INV1000175,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,204841.78,2026-03-23,2026-04-22,closed,2026-04-20,28,-2,False,False,prompt_payer
+INV1000176,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,181443.91,2026-04-13,2026-05-13,open,,,,False,False,prompt_payer
+INV1000177,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,216552.51,2026-05-06,2026-06-05,closed,2026-06-05,30,0,False,False,prompt_payer
+INV1000178,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,175740.76,2026-06-15,2026-07-15,closed,2026-07-13,28,-2,False,False,prompt_payer
+INV1000179,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,231201.02,2026-06-23,2026-07-23,closed,2026-07-26,33,3,False,False,prompt_payer
+INV1000180,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,121381.15,2026-06-27,2026-07-27,closed,2026-07-25,28,-2,False,False,prompt_payer
+INV1000181,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,234767.8,2026-07-03,2026-08-02,closed,2026-08-04,32,2,False,False,prompt_payer
+INV1000182,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,137280.56,2026-08-07,2026-09-06,disputed_open,,,,False,False,prompt_payer
+INV1000183,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,145529.96,2026-08-26,2026-09-25,open,,,,False,False,prompt_payer
+INV1000184,B001,B001-C1005,Textiles Client 005,Textiles & Apparel,30,148371.47,2026-08-31,2026-09-30,open,,,,False,False,prompt_payer
+INV1000185,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,398662.34,2024-04-17,2024-05-02,closed,2024-04-23,6,-9,False,False,erratic_payer
+INV1000186,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,294544.77,2024-06-30,2024-07-15,closed,2024-07-11,11,-4,False,False,erratic_payer
+INV1000187,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,189025.97,2024-07-01,2024-07-16,closed,2024-07-21,20,5,False,False,erratic_payer
+INV1000188,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,205551.63,2024-11-16,2024-12-01,closed,2025-04-02,137,122,False,False,erratic_payer
+INV1000189,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,258603.75,2024-12-06,2024-12-21,closed,2025-01-01,26,11,False,False,erratic_payer
+INV1000190,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,301538.86,2024-12-12,2024-12-27,closed,2025-01-11,30,15,False,False,erratic_payer
+INV1000191,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,234516.18,2025-04-01,2025-04-16,closed,2025-04-26,25,10,False,False,erratic_payer
+INV1000192,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,228171.83,2025-04-21,2025-05-06,closed,2025-05-04,13,-2,False,False,erratic_payer
+INV1000193,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,362267.04,2025-07-28,2025-08-12,closed,2025-08-15,18,3,False,False,erratic_payer
+INV1000194,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,238169.06,2025-10-10,2025-10-25,closed,2026-01-11,93,78,False,False,erratic_payer
+INV1000195,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,129942.37,2025-10-24,2025-11-08,closed,2025-11-20,27,12,False,False,erratic_payer
+INV1000196,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,538133.88,2025-10-26,2025-11-10,closed,2025-11-22,27,12,False,False,erratic_payer
+INV1000197,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,213254.45,2025-11-02,2025-11-17,closed,2025-11-19,17,2,False,False,erratic_payer
+INV1000198,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,204789.97,2025-11-03,2025-11-18,closed,2025-11-04,1,-14,False,False,erratic_payer
+INV1000199,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,262750.67,2025-11-28,2025-12-13,closed,2025-12-20,22,7,False,False,erratic_payer
+INV1000200,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,244117.42,2026-01-13,2026-01-28,closed,2026-01-22,9,-6,False,False,erratic_payer
+INV1000201,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,302874.34,2026-01-19,2026-02-03,closed,2026-01-31,12,-3,False,False,erratic_payer
+INV1000202,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,242696.1,2026-02-10,2026-02-25,closed,2026-03-25,43,28,False,False,erratic_payer
+INV1000203,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,288259.08,2026-03-20,2026-04-04,closed,2026-04-12,23,8,False,False,erratic_payer
+INV1000204,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,187252.8,2026-04-08,2026-04-23,closed,2026-04-23,15,0,False,False,erratic_payer
+INV1000205,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,117328.64,2026-04-13,2026-04-28,closed,2026-05-03,20,5,False,False,erratic_payer
+INV1000206,B001,B001-C1006,Metal Client 006,Metal & Engineering,15,264393.56,2026-07-03,2026-07-18,closed,2026-07-27,24,9,False,False,erratic_payer
+INV1000207,B001,B001-C1007,Auto Client 007,Auto Components,60,88867.89,2024-04-20,2024-06-19,closed,2024-06-29,70,10,False,False,seasonal_payer
+INV1000208,B001,B001-C1007,Auto Client 007,Auto Components,60,188860.02,2024-04-23,2024-06-22,closed,2024-07-05,73,13,False,True,seasonal_payer
+INV1000209,B001,B001-C1007,Auto Client 007,Auto Components,60,450000.58,2024-05-19,2024-07-18,closed,2024-08-02,75,15,False,True,seasonal_payer
+INV1000210,B001,B001-C1007,Auto Client 007,Auto Components,60,87351.29,2024-06-05,2024-08-04,closed,2024-08-17,73,13,False,False,seasonal_payer
+INV1000211,B001,B001-C1007,Auto Client 007,Auto Components,60,99457.69,2024-06-09,2024-08-08,closed,2024-08-12,64,4,False,False,seasonal_payer
+INV1000212,B001,B001-C1007,Auto Client 007,Auto Components,60,79243.8,2024-07-29,2024-09-27,closed,2024-10-13,76,16,False,False,seasonal_payer
+INV1000213,B001,B001-C1007,Auto Client 007,Auto Components,60,75017.29,2024-08-27,2024-10-26,closed,2024-11-14,79,19,False,False,seasonal_payer
+INV1000214,B001,B001-C1007,Auto Client 007,Auto Components,60,50993.37,2024-10-01,2024-11-30,open,,,,False,False,seasonal_payer
+INV1000215,B001,B001-C1007,Auto Client 007,Auto Components,60,102294.03,2024-10-02,2024-12-01,closed,2024-12-11,70,10,False,False,seasonal_payer
+INV1000216,B001,B001-C1007,Auto Client 007,Auto Components,60,113156.63,2024-10-24,2024-12-23,closed,2025-01-09,77,17,False,False,seasonal_payer
+INV1000217,B001,B001-C1007,Auto Client 007,Auto Components,60,99316.71,2024-11-10,2025-01-09,closed,2025-01-16,67,7,False,False,seasonal_payer
+INV1000218,B001,B001-C1007,Auto Client 007,Auto Components,60,64946.26,2025-01-22,2025-03-23,open,,,,False,False,seasonal_payer
+INV1000219,B001,B001-C1007,Auto Client 007,Auto Components,60,68198.22,2025-01-31,2025-04-01,closed,2025-04-17,76,16,False,False,seasonal_payer
+INV1000220,B001,B001-C1007,Auto Client 007,Auto Components,60,56697.84,2025-03-24,2025-05-23,closed,2025-05-20,57,-3,False,False,seasonal_payer
+INV1000221,B001,B001-C1007,Auto Client 007,Auto Components,60,77376.07,2025-04-01,2025-05-31,closed,2025-06-02,62,2,False,False,seasonal_payer
+INV1000222,B001,B001-C1007,Auto Client 007,Auto Components,60,126292.14,2025-05-03,2025-07-02,closed,2025-07-09,67,7,False,False,seasonal_payer
+INV1000223,B001,B001-C1007,Auto Client 007,Auto Components,60,100814.17,2025-06-25,2025-08-24,closed,2025-09-10,77,17,False,False,seasonal_payer
+INV1000224,B001,B001-C1007,Auto Client 007,Auto Components,60,67141.69,2025-07-17,2025-09-15,closed,2025-10-15,90,30,False,False,seasonal_payer
+INV1000225,B001,B001-C1007,Auto Client 007,Auto Components,60,53208.78,2025-08-04,2025-10-03,closed,2025-10-20,77,17,False,False,seasonal_payer
+INV1000226,B001,B001-C1007,Auto Client 007,Auto Components,60,89378.2,2025-11-10,2026-01-09,closed,2026-01-20,71,11,False,False,seasonal_payer
+INV1000227,B001,B001-C1007,Auto Client 007,Auto Components,60,95075.23,2026-01-04,2026-03-05,closed,2026-03-09,64,4,False,False,seasonal_payer
+INV1000228,B001,B001-C1007,Auto Client 007,Auto Components,60,77230.98,2026-02-02,2026-04-03,closed,2026-03-26,52,-8,False,False,seasonal_payer
+INV1000229,B001,B001-C1007,Auto Client 007,Auto Components,60,74344.44,2026-05-25,2026-07-24,closed,2026-07-30,66,6,False,False,seasonal_payer
+INV1000230,B001,B001-C1007,Auto Client 007,Auto Components,60,70428.62,2026-06-24,2026-08-23,closed,2026-09-02,70,10,False,False,seasonal_payer
+INV1000231,B001,B001-C1007,Auto Client 007,Auto Components,60,77203.84,2026-07-20,2026-09-18,open,,,,False,False,seasonal_payer
+INV1000232,B001,B001-C1007,Auto Client 007,Auto Components,60,61742.39,2026-07-26,2026-09-24,open,,,,False,False,seasonal_payer
+INV1000233,B001,B001-C1007,Auto Client 007,Auto Components,60,88799.05,2026-07-29,2026-09-27,open,,,,False,False,seasonal_payer
+INV1000234,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,318841.19,2024-03-19,2024-05-03,closed,2024-05-24,66,21,False,False,chronic_late_payer
+INV1000235,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,255678.87,2024-04-27,2024-06-11,closed,2024-07-21,85,40,False,False,chronic_late_payer
+INV1000236,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,240084.22,2024-05-24,2024-07-08,closed,2024-08-23,91,46,False,False,chronic_late_payer
+INV1000237,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,173572.59,2024-10-28,2024-12-12,closed,2025-01-19,83,38,False,False,chronic_late_payer
+INV1000238,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,168210.35,2025-01-10,2025-02-24,closed,2025-04-03,83,38,False,False,chronic_late_payer
+INV1000239,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,478746.99,2025-01-24,2025-03-10,closed,2025-03-24,59,14,False,False,chronic_late_payer
+INV1000240,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,196588.98,2025-03-31,2025-05-15,closed,2025-06-10,71,26,False,False,chronic_late_payer
+INV1000241,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,141646.52,2025-09-25,2025-11-09,closed,2025-12-23,89,44,False,False,chronic_late_payer
+INV1000242,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,275971.7,2025-09-29,2025-11-13,closed,2025-12-01,63,18,False,False,chronic_late_payer
+INV1000243,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,215882.72,2026-05-08,2026-06-22,closed,2026-07-31,84,39,False,False,chronic_late_payer
+INV1000244,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,259906.4,2026-06-15,2026-07-30,closed,2026-08-20,66,21,False,False,chronic_late_payer
+INV1000245,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,250797.35,2026-06-27,2026-08-11,open,,,,False,False,chronic_late_payer
+INV1000246,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,175015.37,2026-07-20,2026-09-03,open,,,,False,False,chronic_late_payer
+INV1000247,B001,B001-C1008,Metal Client 008,Metal & Engineering,45,136528.35,2026-07-28,2026-09-11,open,,,,False,False,chronic_late_payer
+INV1000248,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,113943.1,2024-04-03,2024-06-02,closed,2024-06-25,83,23,False,False,deteriorating_payer
+INV1000249,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,95213.57,2024-06-10,2024-08-09,closed,2024-08-12,63,3,False,False,deteriorating_payer
+INV1000250,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,95457.12,2024-06-10,2024-08-09,closed,2024-08-30,81,21,False,False,deteriorating_payer
+INV1000251,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,100357.52,2024-07-30,2024-09-28,closed,2024-10-15,77,17,False,False,deteriorating_payer
+INV1000252,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,158822.19,2024-09-06,2024-11-05,closed,2024-11-15,70,10,True,False,deteriorating_payer
+INV1000253,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,133681.82,2024-09-25,2024-11-24,closed,2024-11-27,63,3,False,False,deteriorating_payer
+INV1000254,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,124976.29,2024-11-07,2025-01-06,closed,2025-01-20,74,14,False,False,deteriorating_payer
+INV1000255,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,104664.04,2024-11-10,2025-01-09,closed,2025-01-20,71,11,False,False,deteriorating_payer
+INV1000256,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,110338.3,2024-12-29,2025-02-27,closed,2025-02-25,58,-2,False,False,deteriorating_payer
+INV1000257,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,109433.9,2025-01-09,2025-03-10,closed,2025-03-24,74,14,False,False,deteriorating_payer
+INV1000258,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,139661.15,2025-02-02,2025-04-03,closed,2025-05-11,98,38,False,False,deteriorating_payer
+INV1000259,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,153259.67,2025-03-16,2025-05-15,closed,2025-05-16,61,1,True,False,deteriorating_payer
+INV1000260,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,129701.76,2025-03-24,2025-05-23,closed,2025-06-17,85,25,False,False,deteriorating_payer
+INV1000261,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,123312.84,2025-03-28,2025-05-27,closed,2025-06-25,89,29,False,False,deteriorating_payer
+INV1000262,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,162056.93,2025-04-07,2025-06-06,closed,2025-06-18,72,12,False,False,deteriorating_payer
+INV1000263,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,167653.98,2025-04-12,2025-06-11,closed,2025-07-09,88,28,False,False,deteriorating_payer
+INV1000264,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,113446.48,2025-05-07,2025-07-06,closed,2025-08-23,108,48,True,False,deteriorating_payer
+INV1000265,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,548623.22,2025-05-23,2025-07-22,closed,2025-08-18,87,27,False,True,deteriorating_payer
+INV1000266,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,158101.77,2025-06-29,2025-08-28,closed,2025-09-21,84,24,False,False,deteriorating_payer
+INV1000267,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,194601.68,2025-08-12,2025-10-11,closed,2025-11-03,83,23,False,False,deteriorating_payer
+INV1000268,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,168375.79,2025-09-20,2025-11-19,closed,2025-12-26,97,37,False,False,deteriorating_payer
+INV1000269,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,153439.49,2025-10-12,2025-12-11,closed,2026-01-11,91,31,False,False,deteriorating_payer
+INV1000270,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,142834.29,2025-10-19,2025-12-18,closed,2026-01-20,93,33,False,False,deteriorating_payer
+INV1000271,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,91694.59,2025-11-09,2026-01-08,closed,2026-01-26,78,18,False,False,deteriorating_payer
+INV1000272,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,97501.84,2025-11-15,2026-01-14,closed,2026-02-05,82,22,False,False,deteriorating_payer
+INV1000273,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,134847.91,2025-11-16,2026-01-15,closed,2026-02-24,100,40,False,False,deteriorating_payer
+INV1000274,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,115535.86,2025-11-28,2026-01-27,closed,2026-03-26,118,58,False,False,deteriorating_payer
+INV1000275,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,146062.85,2025-11-29,2026-01-28,closed,2026-03-15,106,46,False,False,deteriorating_payer
+INV1000276,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,143494.64,2025-12-09,2026-02-07,closed,2026-03-20,101,41,False,False,deteriorating_payer
+INV1000277,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,166388.92,2026-01-02,2026-03-03,closed,2026-03-24,81,21,False,False,deteriorating_payer
+INV1000278,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,96094.02,2026-01-25,2026-03-26,closed,2026-05-04,99,39,False,False,deteriorating_payer
+INV1000279,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,135295.49,2026-02-16,2026-04-17,closed,2026-05-12,85,25,False,False,deteriorating_payer
+INV1000280,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,77809.02,2026-03-25,2026-05-24,closed,2026-07-13,110,50,False,False,deteriorating_payer
+INV1000281,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,114301.54,2026-04-17,2026-06-16,closed,2026-07-14,88,28,False,False,deteriorating_payer
+INV1000282,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,171604.92,2026-05-20,2026-07-19,closed,2026-07-27,68,8,False,False,deteriorating_payer
+INV1000283,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,95674.58,2026-05-28,2026-07-27,open,,,,False,False,deteriorating_payer
+INV1000284,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,120286.66,2026-06-25,2026-08-24,open,,,,False,False,deteriorating_payer
+INV1000285,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,89873.44,2026-07-28,2026-09-26,disputed_open,,,,False,False,deteriorating_payer
+INV1000286,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,136474.13,2026-08-02,2026-10-01,open,,,,False,False,deteriorating_payer
+INV1000287,B001,B001-C1009,Chemicals Client 009,Chemicals & Plastics,60,234836.16,2026-08-14,2026-10-13,open,,,,False,False,deteriorating_payer
+INV1000288,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,289386.06,2024-06-02,2024-07-17,closed,2024-07-07,35,-10,False,False,average_payer
+INV1000289,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,400717.12,2024-06-17,2024-08-01,closed,2024-08-05,49,4,False,False,average_payer
+INV1000290,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,377319.4,2024-08-11,2024-09-25,closed,2024-09-13,33,-12,False,False,average_payer
+INV1000291,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,296996.71,2024-08-28,2024-10-12,closed,2024-10-19,52,7,False,False,average_payer
+INV1000292,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,283787.05,2024-08-30,2024-10-14,closed,2024-10-12,43,-2,False,False,average_payer
+INV1000293,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,470032.22,2024-10-30,2024-12-14,closed,2024-12-22,53,8,False,False,average_payer
+INV1000294,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,290942.51,2024-11-20,2025-01-04,closed,2025-01-05,46,1,True,False,average_payer
+INV1000295,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,409018.96,2024-11-21,2025-01-05,closed,2025-01-23,63,18,False,False,average_payer
+INV1000296,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,278540.42,2024-11-24,2025-01-08,closed,2025-01-24,61,16,False,False,average_payer
+INV1000297,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,283135.21,2025-02-02,2025-03-19,closed,2025-03-20,46,1,False,False,average_payer
+INV1000298,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,1548603.62,2025-03-01,2025-04-15,closed,2025-04-29,59,14,False,True,average_payer
+INV1000299,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,609609.72,2025-03-17,2025-05-01,closed,2025-05-11,55,10,False,False,average_payer
+INV1000300,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,365144.72,2025-05-29,2025-07-13,closed,2025-07-20,52,7,False,False,average_payer
+INV1000301,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,341215.5,2025-06-16,2025-07-31,closed,2025-07-31,45,0,False,False,average_payer
+INV1000302,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,420641.73,2025-08-28,2025-10-12,closed,2025-10-16,49,4,False,False,average_payer
+INV1000303,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,266488.99,2025-09-03,2025-10-18,closed,2025-10-26,53,8,False,False,average_payer
+INV1000304,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,361520.72,2025-09-18,2025-11-02,closed,2025-11-16,59,14,False,False,average_payer
+INV1000305,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,294896.16,2025-11-24,2026-01-08,closed,2026-01-08,45,0,True,False,average_payer
+INV1000306,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,220329.74,2025-12-25,2026-02-08,closed,2026-02-15,52,7,False,False,average_payer
+INV1000307,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,566588.9,2026-03-01,2026-04-15,closed,2026-04-11,41,-4,False,False,average_payer
+INV1000308,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,308922.41,2026-03-30,2026-05-14,closed,2026-05-25,56,11,False,False,average_payer
+INV1000309,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,278475.15,2026-06-05,2026-07-20,closed,2026-07-29,54,9,False,False,average_payer
+INV1000310,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,304094.13,2026-06-08,2026-07-23,closed,2026-07-31,53,8,False,False,average_payer
+INV1000311,B001,B001-C1010,Metal Client 010,Metal & Engineering,45,254883.67,2026-08-06,2026-09-20,open,,,,False,False,average_payer
+INV1000312,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,180008.11,2024-03-23,2024-04-22,closed,2024-04-25,33,3,False,False,average_payer
+INV1000313,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,187568.83,2024-03-28,2024-04-27,closed,2024-04-30,33,3,False,False,average_payer
+INV1000314,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,241468.78,2024-04-08,2024-05-08,closed,2024-05-15,37,7,True,False,average_payer
+INV1000315,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,240695.39,2024-04-21,2024-05-21,closed,2024-05-25,34,4,False,False,average_payer
+INV1000316,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,374071.14,2024-05-04,2024-06-03,closed,2024-06-08,35,5,False,False,average_payer
+INV1000317,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,208109.07,2024-05-11,2024-06-10,closed,2024-06-18,38,8,False,False,average_payer
+INV1000318,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,149368.86,2024-05-29,2024-06-28,closed,2024-07-08,40,10,False,False,average_payer
+INV1000319,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,275918.62,2024-05-29,2024-06-28,closed,2024-07-05,37,7,False,False,average_payer
+INV1000320,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,342185.31,2024-06-20,2024-07-20,closed,2024-07-18,28,-2,False,False,average_payer
+INV1000321,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,224472.9,2024-07-16,2024-08-15,closed,2024-08-20,35,5,False,False,average_payer
+INV1000322,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,123997.44,2024-07-18,2024-08-17,closed,2024-08-18,31,1,False,False,average_payer
+INV1000323,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,156785.19,2024-07-24,2024-08-23,closed,2024-08-31,38,8,False,False,average_payer
+INV1000324,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,235402.06,2024-08-29,2024-09-28,closed,2024-10-08,40,10,False,False,average_payer
+INV1000325,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,392760.94,2024-09-25,2024-10-25,closed,2024-11-03,39,9,False,False,average_payer
+INV1000326,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,275020.95,2024-10-01,2024-10-31,closed,2024-11-07,37,7,False,False,average_payer
+INV1000327,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,283347.4,2024-10-02,2024-11-01,closed,2024-11-09,38,8,False,False,average_payer
+INV1000328,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,1009598.05,2024-10-11,2024-11-10,closed,2024-11-11,31,1,False,True,average_payer
+INV1000329,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,112612.68,2024-10-20,2024-11-19,closed,2024-12-05,46,16,False,False,average_payer
+INV1000330,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,225208.09,2024-11-07,2024-12-07,closed,2024-12-20,43,13,False,False,average_payer
+INV1000331,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,191383.75,2024-11-25,2024-12-25,closed,2024-12-26,31,1,False,False,average_payer
+INV1000332,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,121240.55,2024-11-28,2024-12-28,closed,2025-01-02,35,5,False,False,average_payer
+INV1000333,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,242792.38,2024-12-28,2025-01-27,closed,2025-02-05,39,9,False,False,average_payer
+INV1000334,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,234332.75,2025-01-15,2025-02-14,open,,,,False,False,average_payer
+INV1000335,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,195805.37,2025-02-07,2025-03-09,closed,2025-03-15,36,6,False,False,average_payer
+INV1000336,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,215068.86,2025-02-10,2025-03-12,closed,2025-03-10,28,-2,False,False,average_payer
+INV1000337,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,281915.97,2025-02-22,2025-03-24,closed,2025-04-05,42,12,False,False,average_payer
+INV1000338,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,127348.54,2025-03-15,2025-04-14,closed,2025-04-23,39,9,False,False,average_payer
+INV1000339,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,203777.13,2025-04-09,2025-05-09,closed,2025-05-13,34,4,False,False,average_payer
+INV1000340,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,145634.08,2025-06-06,2025-07-06,closed,2025-07-09,33,3,False,False,average_payer
+INV1000341,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,250412.03,2025-07-18,2025-08-17,closed,2025-08-16,29,-1,False,False,average_payer
+INV1000342,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,118684.79,2025-07-24,2025-08-23,closed,2025-08-18,25,-5,False,False,average_payer
+INV1000343,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,238437.46,2025-07-25,2025-08-24,closed,2025-08-30,36,6,False,False,average_payer
+INV1000344,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,192103.66,2025-08-03,2025-09-02,closed,2025-09-18,46,16,False,False,average_payer
+INV1000345,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,175525.53,2025-08-05,2025-09-04,closed,2025-09-16,42,12,False,False,average_payer
+INV1000346,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,270723.37,2025-08-14,2025-09-13,closed,2025-09-20,37,7,False,False,average_payer
+INV1000347,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,303705.83,2025-11-08,2025-12-08,closed,2025-12-20,42,12,False,False,average_payer
+INV1000348,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,284150.02,2025-11-12,2025-12-12,closed,2025-12-18,36,6,False,False,average_payer
+INV1000349,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,210594.11,2025-11-16,2025-12-16,closed,2025-12-12,26,-4,False,False,average_payer
+INV1000350,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,384142.34,2025-11-29,2025-12-29,closed,2025-12-22,23,-7,False,False,average_payer
+INV1000351,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,193501.56,2026-01-14,2026-02-13,closed,2026-02-26,43,13,False,False,average_payer
+INV1000352,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,272196.08,2026-01-16,2026-02-15,closed,2026-02-14,29,-1,False,False,average_payer
+INV1000353,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,199788.82,2026-01-23,2026-02-22,closed,2026-03-05,41,11,True,False,average_payer
+INV1000354,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,140267.82,2026-03-03,2026-04-02,closed,2026-04-07,35,5,False,False,average_payer
+INV1000355,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,235901.63,2026-03-24,2026-04-23,closed,2026-05-02,39,9,False,False,average_payer
+INV1000356,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,183419.08,2026-04-15,2026-05-15,closed,2026-05-20,35,5,False,False,average_payer
+INV1000357,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,243547.03,2026-04-16,2026-05-16,closed,2026-06-01,46,16,False,False,average_payer
+INV1000358,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,317652.8,2026-04-17,2026-05-17,closed,2026-05-24,37,7,False,False,average_payer
+INV1000359,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,292219.73,2026-04-30,2026-05-30,closed,2026-06-03,34,4,False,False,average_payer
+INV1000360,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,291302.08,2026-05-05,2026-06-04,closed,2026-06-16,42,12,False,False,average_payer
+INV1000361,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,360145.74,2026-05-08,2026-06-07,closed,2026-06-20,43,13,False,False,average_payer
+INV1000362,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,176648.28,2026-05-17,2026-06-16,closed,2026-06-24,38,8,False,False,average_payer
+INV1000363,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,181001.41,2026-06-16,2026-07-16,closed,2026-07-18,32,2,False,False,average_payer
+INV1000364,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,295974.67,2026-07-15,2026-08-14,closed,2026-08-07,23,-7,False,False,average_payer
+INV1000365,B001,B001-C1011,Chemicals Client 011,Chemicals & Plastics,30,271927.57,2026-08-08,2026-09-07,disputed_open,,,,False,False,average_payer
+INV1000366,B001,B001-C1012,Construction Client 012,Construction & Infra,15,71343.23,2024-03-21,2024-04-05,closed,2024-04-13,23,8,True,False,prompt_payer
+INV1000367,B001,B001-C1012,Construction Client 012,Construction & Infra,15,91645.15,2024-03-26,2024-04-10,closed,2024-04-10,15,0,False,False,prompt_payer
+INV1000368,B001,B001-C1012,Construction Client 012,Construction & Infra,15,115522.76,2024-04-09,2024-04-24,closed,2024-04-22,13,-2,False,False,prompt_payer
+INV1000369,B001,B001-C1012,Construction Client 012,Construction & Infra,15,76686.58,2024-04-19,2024-05-04,closed,2024-05-06,17,2,False,False,prompt_payer
+INV1000370,B001,B001-C1012,Construction Client 012,Construction & Infra,15,105578.71,2024-05-20,2024-06-04,closed,2024-06-03,14,-1,False,False,prompt_payer
+INV1000371,B001,B001-C1012,Construction Client 012,Construction & Infra,15,121536.52,2024-07-26,2024-08-10,closed,2024-08-09,14,-1,False,False,prompt_payer
+INV1000372,B001,B001-C1012,Construction Client 012,Construction & Infra,15,237534.69,2024-07-28,2024-08-12,closed,2024-08-12,15,0,False,True,prompt_payer
+INV1000373,B001,B001-C1012,Construction Client 012,Construction & Infra,15,104234.52,2024-09-07,2024-09-22,closed,2024-09-24,17,2,False,False,prompt_payer
+INV1000374,B001,B001-C1012,Construction Client 012,Construction & Infra,15,554020.82,2024-09-21,2024-10-06,closed,2024-10-02,11,-4,False,True,prompt_payer
+INV1000375,B001,B001-C1012,Construction Client 012,Construction & Infra,15,66916.79,2024-10-06,2024-10-21,closed,2024-10-23,17,2,False,False,prompt_payer
+INV1000376,B001,B001-C1012,Construction Client 012,Construction & Infra,15,89231.92,2024-10-21,2024-11-05,closed,2024-11-03,13,-2,False,False,prompt_payer
+INV1000377,B001,B001-C1012,Construction Client 012,Construction & Infra,15,40938.48,2024-12-03,2024-12-18,closed,2024-12-20,17,2,False,False,prompt_payer
+INV1000378,B001,B001-C1012,Construction Client 012,Construction & Infra,15,39416.19,2024-12-16,2024-12-31,closed,2024-12-28,12,-3,False,False,prompt_payer
+INV1000379,B001,B001-C1012,Construction Client 012,Construction & Infra,15,49232.86,2024-12-20,2025-01-04,closed,2024-12-31,11,-4,False,False,prompt_payer
+INV1000380,B001,B001-C1012,Construction Client 012,Construction & Infra,15,77529.69,2025-01-29,2025-02-13,closed,2025-02-12,14,-1,False,False,prompt_payer
+INV1000381,B001,B001-C1012,Construction Client 012,Construction & Infra,15,86928.8,2025-02-07,2025-02-22,closed,2025-02-18,11,-4,False,False,prompt_payer
+INV1000382,B001,B001-C1012,Construction Client 012,Construction & Infra,15,41154.38,2025-02-17,2025-03-04,closed,2025-03-02,13,-2,False,False,prompt_payer
+INV1000383,B001,B001-C1012,Construction Client 012,Construction & Infra,15,65760.28,2025-05-03,2025-05-18,closed,2025-05-21,18,3,False,False,prompt_payer
+INV1000384,B001,B001-C1012,Construction Client 012,Construction & Infra,15,67223.2,2025-05-04,2025-05-19,closed,2025-05-21,17,2,True,False,prompt_payer
+INV1000385,B001,B001-C1012,Construction Client 012,Construction & Infra,15,48254.37,2025-05-04,2025-05-19,closed,2025-05-17,13,-2,True,False,prompt_payer
+INV1000386,B001,B001-C1012,Construction Client 012,Construction & Infra,15,63775.75,2025-05-14,2025-05-29,closed,2025-05-28,14,-1,False,False,prompt_payer
+INV1000387,B001,B001-C1012,Construction Client 012,Construction & Infra,15,95473.61,2025-06-01,2025-06-16,closed,2025-06-17,16,1,False,False,prompt_payer
+INV1000388,B001,B001-C1012,Construction Client 012,Construction & Infra,15,70471.68,2025-06-05,2025-06-20,closed,2025-06-17,12,-3,False,False,prompt_payer
+INV1000389,B001,B001-C1012,Construction Client 012,Construction & Infra,15,94808.85,2025-06-19,2025-07-04,closed,2025-06-28,9,-6,False,False,prompt_payer
+INV1000390,B001,B001-C1012,Construction Client 012,Construction & Infra,15,90213.47,2025-06-28,2025-07-13,closed,2025-07-09,11,-4,False,False,prompt_payer
+INV1000391,B001,B001-C1012,Construction Client 012,Construction & Infra,15,83791.26,2025-07-20,2025-08-04,closed,2025-08-08,19,4,False,False,prompt_payer
+INV1000392,B001,B001-C1012,Construction Client 012,Construction & Infra,15,68055.27,2025-07-25,2025-08-09,closed,2025-08-15,21,6,False,False,prompt_payer
+INV1000393,B001,B001-C1012,Construction Client 012,Construction & Infra,15,366346.94,2025-07-28,2025-08-12,closed,2025-08-13,16,1,False,True,prompt_payer
+INV1000394,B001,B001-C1012,Construction Client 012,Construction & Infra,15,51645.95,2025-09-24,2025-10-09,closed,2025-10-04,10,-5,False,False,prompt_payer
+INV1000395,B001,B001-C1012,Construction Client 012,Construction & Infra,15,102670.6,2025-11-01,2025-11-16,closed,2025-11-17,16,1,False,False,prompt_payer
+INV1000396,B001,B001-C1012,Construction Client 012,Construction & Infra,15,121673.86,2025-12-30,2026-01-14,closed,2026-01-15,16,1,False,False,prompt_payer
+INV1000397,B001,B001-C1012,Construction Client 012,Construction & Infra,15,48633.62,2026-01-16,2026-01-31,closed,2026-02-01,16,1,False,False,prompt_payer
+INV1000398,B001,B001-C1012,Construction Client 012,Construction & Infra,15,50075.12,2026-01-24,2026-02-08,closed,2026-02-14,21,6,False,False,prompt_payer
+INV1000399,B001,B001-C1012,Construction Client 012,Construction & Infra,15,69772.21,2026-02-05,2026-02-20,closed,2026-02-24,19,4,False,False,prompt_payer
+INV1000400,B001,B001-C1012,Construction Client 012,Construction & Infra,15,47665.07,2026-02-16,2026-03-03,closed,2026-03-07,19,4,False,False,prompt_payer
+INV1000401,B001,B001-C1012,Construction Client 012,Construction & Infra,15,83387.13,2026-03-06,2026-03-21,closed,2026-03-18,12,-3,False,False,prompt_payer
+INV1000402,B001,B001-C1012,Construction Client 012,Construction & Infra,15,48316.27,2026-04-07,2026-04-22,closed,2026-04-21,14,-1,False,False,prompt_payer
+INV1000403,B001,B001-C1012,Construction Client 012,Construction & Infra,15,141726.89,2026-04-12,2026-04-27,closed,2026-04-27,15,0,False,False,prompt_payer
+INV1000404,B001,B001-C1012,Construction Client 012,Construction & Infra,15,126480.63,2026-04-24,2026-05-09,closed,2026-05-12,18,3,False,False,prompt_payer
+INV1000405,B001,B001-C1012,Construction Client 012,Construction & Infra,15,87081.09,2026-05-23,2026-06-07,closed,2026-06-07,15,0,False,False,prompt_payer
+INV1000406,B001,B001-C1012,Construction Client 012,Construction & Infra,15,60742.94,2026-05-25,2026-06-09,closed,2026-06-12,18,3,False,False,prompt_payer
+INV1000407,B001,B001-C1012,Construction Client 012,Construction & Infra,15,101248.56,2026-06-11,2026-06-26,closed,2026-06-30,19,4,False,False,prompt_payer
+INV1000408,B001,B001-C1012,Construction Client 012,Construction & Infra,15,62258.78,2026-07-09,2026-07-24,closed,2026-07-25,16,1,False,False,prompt_payer
+INV1000409,B001,B001-C1012,Construction Client 012,Construction & Infra,15,53105.65,2026-07-11,2026-07-26,closed,2026-08-02,22,7,False,False,prompt_payer
+INV1000410,B001,B001-C1012,Construction Client 012,Construction & Infra,15,38865.98,2026-07-12,2026-07-27,closed,2026-07-26,14,-1,False,False,prompt_payer
+INV1000411,B001,B001-C1012,Construction Client 012,Construction & Infra,15,54033.76,2026-07-17,2026-08-01,closed,2026-08-03,17,2,False,False,prompt_payer
+INV1000412,B001,B001-C1012,Construction Client 012,Construction & Infra,15,111911.79,2026-08-28,2026-09-12,open,,,,False,False,prompt_payer
+INV1000413,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,11851.03,2024-03-16,2024-03-31,closed,2024-04-03,18,3,False,False,average_payer
+INV1000414,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,14200.78,2024-05-08,2024-05-23,closed,2024-05-25,17,2,False,False,average_payer
+INV1000415,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,9371.29,2024-06-04,2024-06-19,closed,2024-06-18,14,-1,False,False,average_payer
+INV1000416,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,16772.37,2024-07-06,2024-07-21,closed,2024-07-25,19,4,False,False,average_payer
+INV1000417,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,6518.59,2024-07-25,2024-08-09,closed,2024-08-12,18,3,False,False,average_payer
+INV1000418,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,6675.49,2024-08-13,2024-08-28,closed,2024-09-01,19,4,False,False,average_payer
+INV1000419,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,9862.48,2024-09-02,2024-09-17,closed,2024-09-22,20,5,False,False,average_payer
+INV1000420,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,15155.8,2024-10-22,2024-11-06,closed,2024-11-11,20,5,True,False,average_payer
+INV1000421,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,9531.96,2024-12-12,2024-12-27,closed,2025-01-05,24,9,False,False,average_payer
+INV1000422,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,8655.05,2025-01-08,2025-01-23,closed,2025-01-26,18,3,False,False,average_payer
+INV1000423,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,11440.91,2025-01-27,2025-02-11,closed,2025-02-26,30,15,False,False,average_payer
+INV1000424,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,11889.21,2025-02-06,2025-02-21,closed,2025-02-22,16,1,False,False,average_payer
+INV1000425,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,7794.36,2025-02-28,2025-03-15,closed,2025-03-27,27,12,False,False,average_payer
+INV1000426,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,29385.02,2025-03-28,2025-04-12,closed,2025-04-21,24,9,False,True,average_payer
+INV1000427,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,9074.04,2025-04-28,2025-05-13,closed,2025-05-19,21,6,False,False,average_payer
+INV1000428,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,37922.13,2025-06-10,2025-06-25,closed,2025-06-28,18,3,False,True,average_payer
+INV1000429,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,7864.53,2025-06-13,2025-06-28,closed,2025-07-02,19,4,False,False,average_payer
+INV1000430,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,12139.0,2025-07-07,2025-07-22,closed,2025-07-28,21,6,False,False,average_payer
+INV1000431,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,11471.17,2025-07-19,2025-08-03,closed,2025-08-20,32,17,False,False,average_payer
+INV1000432,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,14199.03,2025-08-02,2025-08-17,closed,2025-08-31,29,14,False,False,average_payer
+INV1000433,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,9482.99,2025-08-07,2025-08-22,closed,2025-08-20,13,-2,False,False,average_payer
+INV1000434,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,12134.98,2025-08-12,2025-08-27,closed,2025-09-07,26,11,False,False,average_payer
+INV1000435,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,8955.05,2025-09-17,2025-10-02,closed,2025-10-05,18,3,False,False,average_payer
+INV1000436,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,7664.91,2025-09-25,2025-10-10,closed,2025-10-16,21,6,False,False,average_payer
+INV1000437,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,9551.05,2025-10-17,2025-11-01,closed,2025-11-14,28,13,False,False,average_payer
+INV1000438,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,18333.67,2025-10-17,2025-11-01,closed,2025-11-05,19,4,False,False,average_payer
+INV1000439,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,6635.31,2025-10-30,2025-11-14,closed,2025-11-23,24,9,False,False,average_payer
+INV1000440,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,9439.64,2025-11-16,2025-12-01,closed,2025-12-12,26,11,False,False,average_payer
+INV1000441,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,10207.83,2026-01-06,2026-01-21,closed,2026-01-24,18,3,False,False,average_payer
+INV1000442,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,10870.86,2026-01-19,2026-02-03,closed,2026-02-02,14,-1,False,False,average_payer
+INV1000443,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,14472.26,2026-02-09,2026-02-24,closed,2026-03-03,22,7,False,False,average_payer
+INV1000444,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,10638.72,2026-02-27,2026-03-14,closed,2026-03-19,20,5,False,False,average_payer
+INV1000445,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,10285.04,2026-02-28,2026-03-15,closed,2026-03-14,14,-1,False,False,average_payer
+INV1000446,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,11548.9,2026-03-08,2026-03-23,closed,2026-04-08,31,16,False,False,average_payer
+INV1000447,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,10439.24,2026-04-02,2026-04-17,closed,2026-05-06,34,19,False,False,average_payer
+INV1000448,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,12870.08,2026-04-23,2026-05-08,closed,2026-05-20,27,12,False,False,average_payer
+INV1000449,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,11997.81,2026-05-22,2026-06-06,closed,2026-06-04,13,-2,False,False,average_payer
+INV1000450,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,10017.65,2026-06-26,2026-07-11,closed,2026-07-26,30,15,False,False,average_payer
+INV1000451,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,14169.29,2026-07-05,2026-07-20,closed,2026-07-25,20,5,False,False,average_payer
+INV1000452,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,19098.36,2026-07-21,2026-08-05,closed,2026-08-06,16,1,False,False,average_payer
+INV1000453,B001,B001-C1013,Retail Client 013,Retail & Distribution,15,8875.69,2026-08-04,2026-08-19,closed,2026-08-18,14,-1,False,False,average_payer
+INV1000454,B001,B001-C1014,Auto Client 014,Auto Components,30,102774.85,2024-04-28,2024-05-28,closed,2024-06-02,35,5,False,False,average_payer
+INV1000455,B001,B001-C1014,Auto Client 014,Auto Components,30,85736.05,2024-05-09,2024-06-08,closed,2024-05-29,20,-10,False,False,average_payer
+INV1000456,B001,B001-C1014,Auto Client 014,Auto Components,30,86537.17,2024-05-09,2024-06-08,closed,2024-06-20,42,12,True,False,average_payer
+INV1000457,B001,B001-C1014,Auto Client 014,Auto Components,30,381540.02,2024-06-23,2024-07-23,closed,2024-07-27,34,4,False,True,average_payer
+INV1000458,B001,B001-C1014,Auto Client 014,Auto Components,30,53426.2,2024-07-26,2024-08-25,closed,2024-08-28,33,3,False,False,average_payer
+INV1000459,B001,B001-C1014,Auto Client 014,Auto Components,30,54065.62,2024-07-29,2024-08-28,closed,2024-09-06,39,9,False,False,average_payer
+INV1000460,B001,B001-C1014,Auto Client 014,Auto Components,30,42188.21,2024-08-03,2024-09-02,closed,2024-09-02,30,0,False,False,average_payer
+INV1000461,B001,B001-C1014,Auto Client 014,Auto Components,30,54531.13,2024-08-07,2024-09-06,closed,2024-09-11,35,5,False,False,average_payer
+INV1000462,B001,B001-C1014,Auto Client 014,Auto Components,30,79878.28,2024-10-15,2024-11-14,closed,2024-11-18,34,4,False,False,average_payer
+INV1000463,B001,B001-C1014,Auto Client 014,Auto Components,30,138761.11,2024-11-12,2024-12-12,closed,2024-12-21,39,9,False,False,average_payer
+INV1000464,B001,B001-C1014,Auto Client 014,Auto Components,30,82867.13,2024-11-19,2024-12-19,closed,2024-12-15,26,-4,False,False,average_payer
+INV1000465,B001,B001-C1014,Auto Client 014,Auto Components,30,77246.7,2024-11-23,2024-12-23,closed,2024-12-24,31,1,False,False,average_payer
+INV1000466,B001,B001-C1014,Auto Client 014,Auto Components,30,69775.22,2025-01-05,2025-02-04,closed,2025-02-17,43,13,False,False,average_payer
+INV1000467,B001,B001-C1014,Auto Client 014,Auto Components,30,324411.99,2025-03-10,2025-04-09,closed,2025-05-06,57,27,False,True,average_payer
+INV1000468,B001,B001-C1014,Auto Client 014,Auto Components,30,65906.32,2025-04-04,2025-05-04,closed,2025-04-29,25,-5,False,False,average_payer
+INV1000469,B001,B001-C1014,Auto Client 014,Auto Components,30,58916.19,2025-04-28,2025-05-28,closed,2025-05-18,20,-10,False,False,average_payer
+INV1000470,B001,B001-C1014,Auto Client 014,Auto Components,30,61351.12,2025-05-18,2025-06-17,open,,,,False,False,average_payer
+INV1000471,B001,B001-C1014,Auto Client 014,Auto Components,30,49388.77,2025-06-16,2025-07-16,closed,2025-07-19,33,3,False,False,average_payer
+INV1000472,B001,B001-C1014,Auto Client 014,Auto Components,30,63729.19,2025-06-20,2025-07-20,closed,2025-07-23,33,3,False,False,average_payer
+INV1000473,B001,B001-C1014,Auto Client 014,Auto Components,30,76436.32,2025-06-22,2025-07-22,closed,2025-07-30,38,8,False,False,average_payer
+INV1000474,B001,B001-C1014,Auto Client 014,Auto Components,30,74024.59,2025-06-26,2025-07-26,closed,2025-08-07,42,12,False,False,average_payer
+INV1000475,B001,B001-C1014,Auto Client 014,Auto Components,30,68786.31,2025-07-03,2025-08-02,closed,2025-08-02,30,0,False,False,average_payer
+INV1000476,B001,B001-C1014,Auto Client 014,Auto Components,30,57629.11,2025-08-01,2025-08-31,closed,2025-08-27,26,-4,False,False,average_payer
+INV1000477,B001,B001-C1014,Auto Client 014,Auto Components,30,65036.63,2025-08-06,2025-09-05,closed,2025-09-01,26,-4,False,False,average_payer
+INV1000478,B001,B001-C1014,Auto Client 014,Auto Components,30,75027.65,2025-08-29,2025-09-28,closed,2025-09-28,30,0,False,False,average_payer
+INV1000479,B001,B001-C1014,Auto Client 014,Auto Components,30,57745.93,2026-02-24,2026-03-26,closed,2026-03-25,29,-1,False,False,average_payer
+INV1000480,B001,B001-C1014,Auto Client 014,Auto Components,30,50162.87,2026-03-06,2026-04-05,closed,2026-04-08,33,3,False,False,average_payer
+INV1000481,B001,B001-C1014,Auto Client 014,Auto Components,30,71477.01,2026-03-08,2026-04-07,closed,2026-04-11,34,4,False,False,average_payer
+INV1000482,B001,B001-C1014,Auto Client 014,Auto Components,30,90801.38,2026-03-11,2026-04-10,closed,2026-04-18,38,8,False,False,average_payer
+INV1000483,B001,B001-C1014,Auto Client 014,Auto Components,30,70702.41,2026-04-16,2026-05-16,closed,2026-05-22,36,6,False,False,average_payer
+INV1000484,B001,B001-C1014,Auto Client 014,Auto Components,30,98346.42,2026-05-26,2026-06-25,closed,2026-06-23,28,-2,False,False,average_payer
+INV1000485,B001,B001-C1014,Auto Client 014,Auto Components,30,64438.27,2026-06-15,2026-07-15,closed,2026-07-23,38,8,False,False,average_payer
+INV1000486,B001,B001-C1014,Auto Client 014,Auto Components,30,92329.45,2026-07-14,2026-08-13,closed,2026-08-11,28,-2,False,False,average_payer
+INV1000487,B001,B001-C1014,Auto Client 014,Auto Components,30,110918.41,2026-07-17,2026-08-16,closed,2026-08-27,41,11,False,False,average_payer
+INV1000488,B001,B001-C1014,Auto Client 014,Auto Components,30,59430.15,2026-07-27,2026-08-26,disputed_open,,,,False,False,average_payer
+INV1000489,B001,B001-C1014,Auto Client 014,Auto Components,30,58493.02,2026-08-16,2026-09-15,open,,,,False,False,average_payer
+INV1000490,B001,B001-C1014,Auto Client 014,Auto Components,30,69277.4,2026-08-29,2026-09-28,open,,,,False,False,average_payer
+INV1000491,B001,B001-C1015,Pharma Client 015,Pharma & Healthcare,45,930101.55,2026-01-28,2026-03-14,closed,2026-03-12,43,-2,False,True,cold_start
+INV1000492,B001,B001-C1015,Pharma Client 015,Pharma & Healthcare,45,173262.15,2026-03-18,2026-05-02,closed,2026-04-29,42,-3,False,False,cold_start
+INV1000493,B001,B001-C1015,Pharma Client 015,Pharma & Healthcare,45,219447.06,2026-05-27,2026-07-11,closed,2026-07-13,47,2,False,False,cold_start
+INV1000494,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,17921.52,2024-03-16,2024-03-31,open,,,,False,False,prompt_payer
+INV1000495,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,32709.72,2024-04-18,2024-05-03,closed,2024-04-27,9,-6,False,False,prompt_payer
+INV1000496,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,19932.69,2024-05-18,2024-06-02,closed,2024-05-29,11,-4,False,False,prompt_payer
+INV1000497,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,24452.58,2024-06-14,2024-06-29,closed,2024-06-25,11,-4,False,False,prompt_payer
+INV1000498,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,26679.39,2024-07-11,2024-07-26,closed,2024-07-28,17,2,False,False,prompt_payer
+INV1000499,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,14946.78,2024-09-06,2024-09-21,closed,2024-09-17,11,-4,False,False,prompt_payer
+INV1000500,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,19228.31,2024-09-11,2024-09-26,closed,2024-09-26,15,0,False,False,prompt_payer
+INV1000501,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,23159.09,2024-10-05,2024-10-20,closed,2024-10-21,16,1,False,False,prompt_payer
+INV1000502,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,20055.42,2024-10-09,2024-10-24,closed,2024-10-25,16,1,False,False,prompt_payer
+INV1000503,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,67245.13,2024-10-30,2024-11-14,closed,2024-11-14,15,0,False,True,prompt_payer
+INV1000504,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,16163.35,2025-01-13,2025-01-28,closed,2025-01-26,13,-2,False,False,prompt_payer
+INV1000505,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,20051.3,2025-01-16,2025-01-31,closed,2025-02-03,18,3,False,False,prompt_payer
+INV1000506,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,69154.39,2025-02-05,2025-02-20,closed,2025-02-17,12,-3,True,True,prompt_payer
+INV1000507,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,25114.51,2025-02-06,2025-02-21,closed,2025-02-20,14,-1,False,False,prompt_payer
+INV1000508,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,32593.56,2025-02-24,2025-03-11,closed,2025-03-07,11,-4,False,False,prompt_payer
+INV1000509,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,35044.93,2025-02-27,2025-03-14,closed,2025-03-18,19,4,True,False,prompt_payer
+INV1000510,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,59872.29,2025-02-28,2025-03-15,closed,2025-03-11,11,-4,False,False,prompt_payer
+INV1000511,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,35648.0,2025-04-21,2025-05-06,closed,2025-05-10,19,4,False,False,prompt_payer
+INV1000512,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,22335.9,2025-04-24,2025-05-09,closed,2025-05-12,18,3,False,False,prompt_payer
+INV1000513,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,34182.45,2025-05-19,2025-06-03,closed,2025-06-05,17,2,False,False,prompt_payer
+INV1000514,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,36975.06,2025-06-01,2025-06-16,closed,2025-06-16,15,0,False,False,prompt_payer
+INV1000515,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,27988.52,2025-07-18,2025-08-02,closed,2025-08-03,16,1,False,False,prompt_payer
+INV1000516,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,17777.39,2025-07-23,2025-08-07,closed,2025-08-05,13,-2,False,False,prompt_payer
+INV1000517,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,29724.89,2025-07-28,2025-08-12,closed,2025-08-04,7,-8,False,False,prompt_payer
+INV1000518,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,113221.33,2025-11-01,2025-11-16,closed,2025-11-18,17,2,False,True,prompt_payer
+INV1000519,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,10277.8,2026-01-12,2026-01-27,closed,2026-01-30,18,3,False,False,prompt_payer
+INV1000520,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,25678.71,2026-02-16,2026-03-03,closed,2026-03-04,16,1,False,False,prompt_payer
+INV1000521,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,26467.22,2026-03-17,2026-04-01,closed,2026-03-31,14,-1,False,False,prompt_payer
+INV1000522,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,88159.82,2026-04-05,2026-04-20,closed,2026-04-13,8,-7,False,True,prompt_payer
+INV1000523,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,24012.37,2026-04-21,2026-05-06,closed,2026-05-10,19,4,False,False,prompt_payer
+INV1000524,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,23205.25,2026-05-11,2026-05-26,closed,2026-05-23,12,-3,False,False,prompt_payer
+INV1000525,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,22581.99,2026-06-09,2026-06-24,closed,2026-06-24,15,0,True,False,prompt_payer
+INV1000526,B001,B001-C1016,FMCG Client 016,FMCG & Food Processing,15,170650.21,2026-08-19,2026-09-03,open,,,,False,True,prompt_payer
+INV1000527,B001,B001-C1017,Chemicals Client 017,Chemicals & Plastics,60,223678.28,2024-06-01,2024-07-31,closed,2024-08-08,68,8,False,False,average_payer
+INV1000528,B001,B001-C1017,Chemicals Client 017,Chemicals & Plastics,60,395822.22,2024-07-21,2024-09-19,closed,2024-09-25,66,6,False,False,average_payer
+INV1000529,B001,B001-C1017,Chemicals Client 017,Chemicals & Plastics,60,207432.7,2024-09-20,2024-11-19,closed,2024-11-22,63,3,False,False,average_payer
+INV1000530,B001,B001-C1017,Chemicals Client 017,Chemicals & Plastics,60,285918.77,2024-11-07,2025-01-06,closed,2024-12-29,52,-8,False,False,average_payer
+INV1000531,B001,B001-C1017,Chemicals Client 017,Chemicals & Plastics,60,227223.52,2024-11-19,2025-01-18,closed,2025-02-03,76,16,False,False,average_payer
+INV1000532,B001,B001-C1017,Chemicals Client 017,Chemicals & Plastics,60,347316.73,2025-01-13,2025-03-14,closed,2025-03-18,64,4,False,False,average_payer
+INV1000533,B001,B001-C1017,Chemicals Client 017,Chemicals & Plastics,60,1357984.13,2026-07-26,2026-09-24,open,,,,False,True,average_payer
+INV1000534,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,382096.76,2024-03-25,2024-05-24,closed,2024-05-28,64,4,False,False,average_payer
+INV1000535,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,127573.21,2024-04-21,2024-06-20,closed,2024-06-17,57,-3,False,False,average_payer
+INV1000536,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,204537.72,2024-05-01,2024-06-30,closed,2024-06-27,57,-3,False,False,average_payer
+INV1000537,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,206275.33,2024-06-11,2024-08-10,closed,2024-08-14,64,4,False,False,average_payer
+INV1000538,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,362174.29,2024-08-17,2024-10-16,closed,2024-10-10,54,-6,False,False,average_payer
+INV1000539,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,296484.04,2024-09-04,2024-11-03,closed,2024-11-12,69,9,True,False,average_payer
+INV1000540,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,186425.98,2024-09-13,2024-11-12,closed,2024-11-23,71,11,False,False,average_payer
+INV1000541,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,370960.58,2024-09-17,2024-11-16,closed,2024-11-25,69,9,False,False,average_payer
+INV1000542,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,179634.96,2024-09-23,2024-11-22,closed,2024-11-25,63,3,False,False,average_payer
+INV1000543,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,255856.47,2024-09-27,2024-11-26,closed,2024-11-29,63,3,False,False,average_payer
+INV1000544,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,216344.85,2024-11-03,2025-01-02,closed,2025-01-17,75,15,False,False,average_payer
+INV1000545,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,188424.75,2024-11-13,2025-01-12,closed,2025-01-24,72,12,False,False,average_payer
+INV1000546,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,203022.07,2024-11-13,2025-01-12,closed,2025-01-18,66,6,False,False,average_payer
+INV1000547,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,208218.42,2024-11-18,2025-01-17,closed,2025-01-24,67,7,False,False,average_payer
+INV1000548,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,166720.59,2024-12-10,2025-02-08,closed,2025-02-12,64,4,False,False,average_payer
+INV1000549,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,192131.49,2024-12-10,2025-02-08,closed,2025-02-12,64,4,False,False,average_payer
+INV1000550,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,339589.44,2024-12-25,2025-02-23,closed,2025-02-17,54,-6,False,False,average_payer
+INV1000551,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,180986.76,2025-01-25,2025-03-26,closed,2025-03-24,58,-2,False,False,average_payer
+INV1000552,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,1133379.93,2025-02-01,2025-04-02,closed,2025-04-11,69,9,False,True,average_payer
+INV1000553,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,297491.71,2025-03-08,2025-05-07,closed,2025-05-02,55,-5,False,False,average_payer
+INV1000554,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,199782.36,2025-03-11,2025-05-10,closed,2025-05-23,73,13,False,False,average_payer
+INV1000555,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,284275.95,2025-03-13,2025-05-12,closed,2025-06-03,82,22,False,False,average_payer
+INV1000556,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,290314.37,2025-03-21,2025-05-20,closed,2025-05-30,70,10,False,False,average_payer
+INV1000557,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,205479.48,2025-04-19,2025-06-18,closed,2025-06-25,67,7,False,False,average_payer
+INV1000558,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,306176.83,2025-04-21,2025-06-20,closed,2025-07-02,72,12,False,False,average_payer
+INV1000559,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,300560.36,2025-06-16,2025-08-15,closed,2025-08-12,57,-3,False,False,average_payer
+INV1000560,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,266313.48,2025-08-08,2025-10-07,closed,2025-10-22,75,15,False,False,average_payer
+INV1000561,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,294827.19,2025-08-25,2025-10-24,closed,2025-10-26,62,2,False,False,average_payer
+INV1000562,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,208602.29,2025-09-10,2025-11-09,closed,2025-11-15,66,6,False,False,average_payer
+INV1000563,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,302717.72,2025-09-10,2025-11-09,closed,2025-11-12,63,3,False,False,average_payer
+INV1000564,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,395876.26,2025-10-17,2025-12-16,closed,2025-12-17,61,1,False,False,average_payer
+INV1000565,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,200782.93,2025-11-06,2026-01-05,closed,2025-12-31,55,-5,False,False,average_payer
+INV1000566,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,272123.16,2025-11-16,2026-01-15,closed,2026-01-18,63,3,False,False,average_payer
+INV1000567,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,238148.91,2025-11-20,2026-01-19,closed,2026-01-25,66,6,False,False,average_payer
+INV1000568,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,142146.22,2025-11-27,2026-01-26,closed,2026-01-27,61,1,False,False,average_payer
+INV1000569,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,348734.59,2025-12-04,2026-02-02,closed,2026-02-03,61,1,False,False,average_payer
+INV1000570,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,168131.44,2025-12-31,2026-03-01,closed,2026-03-09,68,8,False,False,average_payer
+INV1000571,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,432295.65,2026-01-27,2026-03-28,closed,2026-03-25,57,-3,False,False,average_payer
+INV1000572,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,129632.16,2026-03-18,2026-05-17,closed,2026-05-21,64,4,False,False,average_payer
+INV1000573,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,229714.57,2026-04-04,2026-06-03,closed,2026-06-17,74,14,False,False,average_payer
+INV1000574,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,1077534.94,2026-04-12,2026-06-11,closed,2026-06-11,60,0,False,True,average_payer
+INV1000575,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,257962.9,2026-05-23,2026-07-22,closed,2026-08-08,77,17,False,False,average_payer
+INV1000576,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,224097.07,2026-06-16,2026-08-15,closed,2026-08-11,56,-4,False,False,average_payer
+INV1000577,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,282760.82,2026-06-16,2026-08-15,closed,2026-08-07,52,-8,False,False,average_payer
+INV1000578,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,270635.69,2026-08-03,2026-10-02,open,,,,False,False,average_payer
+INV1000579,B001,B001-C1018,Retail Client 018,Retail & Distribution,60,149132.67,2026-08-07,2026-10-06,open,,,,False,False,average_payer
+INV1000580,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,85690.4,2024-09-01,2024-10-01,closed,2024-09-28,27,-3,False,False,prompt_payer
+INV1000581,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,111938.93,2024-10-03,2024-11-02,closed,2024-10-29,26,-4,False,False,prompt_payer
+INV1000582,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,75766.71,2024-11-10,2024-12-10,closed,2024-12-12,32,2,False,False,prompt_payer
+INV1000583,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,95744.9,2024-12-19,2025-01-18,closed,2025-01-24,36,6,False,False,prompt_payer
+INV1000584,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,135666.35,2025-02-09,2025-03-11,closed,2025-03-15,34,4,False,False,prompt_payer
+INV1000585,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,141695.42,2025-03-07,2025-04-06,closed,2025-04-04,28,-2,False,False,prompt_payer
+INV1000586,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,59902.85,2025-04-09,2025-05-09,closed,2025-05-10,31,1,False,False,prompt_payer
+INV1000587,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,134635.37,2025-07-01,2025-07-31,closed,2025-07-27,26,-4,False,False,prompt_payer
+INV1000588,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,89718.88,2025-09-13,2025-10-13,closed,2025-10-14,31,1,False,False,prompt_payer
+INV1000589,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,155404.26,2025-09-21,2025-10-21,closed,2025-10-23,32,2,False,False,prompt_payer
+INV1000590,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,80088.54,2025-11-27,2025-12-27,open,,,,False,False,prompt_payer
+INV1000591,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,100331.22,2026-03-06,2026-04-05,closed,2026-04-03,28,-2,False,False,prompt_payer
+INV1000592,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,114344.33,2026-03-29,2026-04-28,open,,,,False,False,prompt_payer
+INV1000593,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,142430.61,2026-04-19,2026-05-19,closed,2026-05-16,27,-3,False,False,prompt_payer
+INV1000594,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,143400.58,2026-05-12,2026-06-11,closed,2026-06-08,27,-3,False,False,prompt_payer
+INV1000595,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,87493.01,2026-05-18,2026-06-17,closed,2026-06-25,38,8,False,False,prompt_payer
+INV1000596,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,87669.59,2026-06-04,2026-07-04,closed,2026-07-04,30,0,False,False,prompt_payer
+INV1000597,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,505457.12,2026-07-16,2026-08-15,closed,2026-08-13,28,-2,False,True,prompt_payer
+INV1000598,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,304199.67,2026-08-08,2026-09-07,disputed_open,,,,False,True,prompt_payer
+INV1000599,B001,B001-C1019,Electronics Client 019,Electronics & Electricals,30,187593.36,2026-08-12,2026-09-11,disputed_open,,,,False,False,prompt_payer
+INV1000600,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,136906.88,2024-03-22,2024-05-21,closed,2024-05-23,62,2,False,False,average_payer
+INV1000601,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,384645.62,2024-03-25,2024-05-24,closed,2024-05-30,66,6,False,True,average_payer
+INV1000602,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,95699.66,2024-06-23,2024-08-22,closed,2024-08-31,69,9,False,False,average_payer
+INV1000603,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,111869.64,2024-06-25,2024-08-24,closed,2024-08-25,61,1,True,False,average_payer
+INV1000604,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,212621.11,2024-07-04,2024-09-02,closed,2024-09-12,70,10,False,False,average_payer
+INV1000605,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,133913.15,2024-07-16,2024-09-14,closed,2024-09-23,69,9,False,False,average_payer
+INV1000606,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,163986.89,2024-07-27,2024-09-25,closed,2024-09-26,61,1,False,False,average_payer
+INV1000607,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,98682.62,2024-09-07,2024-11-06,closed,2024-11-23,77,17,False,False,average_payer
+INV1000608,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,87100.71,2024-09-23,2024-11-22,closed,2024-12-08,76,16,False,False,average_payer
+INV1000609,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,113429.55,2024-10-17,2024-12-16,closed,2024-12-21,65,5,False,False,average_payer
+INV1000610,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,136498.5,2024-10-21,2024-12-20,closed,2024-12-31,71,11,False,False,average_payer
+INV1000611,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,134780.77,2024-10-25,2024-12-24,closed,2024-12-28,64,4,False,False,average_payer
+INV1000612,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,113778.42,2024-11-09,2025-01-08,closed,2025-01-13,65,5,False,False,average_payer
+INV1000613,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,175909.81,2024-11-26,2025-01-25,closed,2025-01-28,63,3,False,False,average_payer
+INV1000614,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,140611.04,2024-12-28,2025-02-26,closed,2025-03-06,68,8,False,False,average_payer
+INV1000615,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,98617.68,2025-01-02,2025-03-03,closed,2025-02-28,57,-3,False,False,average_payer
+INV1000616,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,250891.13,2025-01-07,2025-03-08,closed,2025-03-17,69,9,False,False,average_payer
+INV1000617,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,150870.35,2025-01-14,2025-03-15,closed,2025-03-21,66,6,False,False,average_payer
+INV1000618,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,114093.48,2025-02-11,2025-04-12,closed,2025-04-23,71,11,False,False,average_payer
+INV1000619,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,127614.96,2025-03-03,2025-05-02,closed,2025-05-15,73,13,False,False,average_payer
+INV1000620,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,124928.8,2025-03-08,2025-05-07,closed,2025-05-14,67,7,False,False,average_payer
+INV1000621,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,69361.11,2025-05-20,2025-07-19,closed,2025-07-27,68,8,False,False,average_payer
+INV1000622,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,101677.58,2025-06-07,2025-08-06,closed,2025-08-08,62,2,False,False,average_payer
+INV1000623,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,142962.76,2025-11-02,2026-01-01,closed,2025-12-28,56,-4,False,False,average_payer
+INV1000624,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,134247.38,2026-02-09,2026-04-10,closed,2026-04-18,68,8,True,False,average_payer
+INV1000625,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,145261.8,2026-02-22,2026-04-23,closed,2026-05-05,72,12,False,False,average_payer
+INV1000626,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,131481.54,2026-04-02,2026-06-01,closed,2026-06-11,70,10,False,False,average_payer
+INV1000627,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,231065.57,2026-04-22,2026-06-21,closed,2026-06-25,64,4,False,False,average_payer
+INV1000628,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,111237.53,2026-05-09,2026-07-08,closed,2026-07-07,59,-1,False,False,average_payer
+INV1000629,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,111202.96,2026-07-10,2026-09-08,open,,,,False,False,average_payer
+INV1000630,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,110911.85,2026-07-18,2026-09-16,open,,,,False,False,average_payer
+INV1000631,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,105232.54,2026-07-19,2026-09-17,open,,,,False,False,average_payer
+INV1000632,B001,B001-C1020,Retail Client 020,Retail & Distribution,60,296793.66,2026-07-25,2026-09-23,open,,,,False,False,average_payer
+INV1000633,B001,B001-C1021,Auto Client 021,Auto Components,30,151635.84,2024-04-30,2024-05-30,closed,2024-06-01,32,2,False,False,seasonal_payer
+INV1000634,B001,B001-C1021,Auto Client 021,Auto Components,30,793435.14,2024-05-28,2024-06-27,closed,2024-06-30,33,3,False,True,seasonal_payer
+INV1000635,B001,B001-C1021,Auto Client 021,Auto Components,30,121928.41,2024-07-03,2024-08-02,closed,2024-08-10,38,8,False,False,seasonal_payer
+INV1000636,B001,B001-C1021,Auto Client 021,Auto Components,30,191574.72,2024-07-05,2024-08-04,closed,2024-08-22,48,18,False,False,seasonal_payer
+INV1000637,B001,B001-C1021,Auto Client 021,Auto Components,30,686178.57,2024-07-18,2024-08-17,closed,2024-08-30,43,13,False,True,seasonal_payer
+INV1000638,B001,B001-C1021,Auto Client 021,Auto Components,30,139764.22,2024-09-11,2024-10-11,closed,2024-10-31,50,20,False,False,seasonal_payer
+INV1000639,B001,B001-C1021,Auto Client 021,Auto Components,30,103920.81,2024-10-29,2024-11-28,closed,2024-12-10,42,12,False,False,seasonal_payer
+INV1000640,B001,B001-C1021,Auto Client 021,Auto Components,30,56149.7,2024-11-13,2024-12-13,closed,2025-01-01,49,19,False,False,seasonal_payer
+INV1000641,B001,B001-C1021,Auto Client 021,Auto Components,30,191067.13,2024-12-23,2025-01-22,closed,2025-01-16,24,-6,False,False,seasonal_payer
+INV1000642,B001,B001-C1021,Auto Client 021,Auto Components,30,130338.48,2025-01-15,2025-02-14,closed,2025-02-11,27,-3,False,False,seasonal_payer
+INV1000643,B001,B001-C1021,Auto Client 021,Auto Components,30,150732.88,2025-01-26,2025-02-25,closed,2025-02-25,30,0,False,False,seasonal_payer
+INV1000644,B001,B001-C1021,Auto Client 021,Auto Components,30,153669.31,2025-04-08,2025-05-08,closed,2025-05-07,29,-1,False,False,seasonal_payer
+INV1000645,B001,B001-C1021,Auto Client 021,Auto Components,30,133560.32,2025-04-14,2025-05-14,closed,2025-05-15,31,1,False,False,seasonal_payer
+INV1000646,B001,B001-C1021,Auto Client 021,Auto Components,30,144064.0,2025-04-26,2025-05-26,closed,2025-06-01,36,6,False,False,seasonal_payer
+INV1000647,B001,B001-C1021,Auto Client 021,Auto Components,30,109067.72,2025-04-30,2025-05-30,closed,2025-06-04,35,5,True,False,seasonal_payer
+INV1000648,B001,B001-C1021,Auto Client 021,Auto Components,30,200649.84,2025-05-17,2025-06-16,closed,2025-06-27,41,11,False,False,seasonal_payer
+INV1000649,B001,B001-C1021,Auto Client 021,Auto Components,30,235032.17,2025-05-29,2025-06-28,closed,2025-07-02,34,4,False,False,seasonal_payer
+INV1000650,B001,B001-C1021,Auto Client 021,Auto Components,30,170912.06,2025-07-28,2025-08-27,closed,2025-09-04,38,8,False,False,seasonal_payer
+INV1000651,B001,B001-C1021,Auto Client 021,Auto Components,30,107129.29,2025-10-27,2025-11-26,closed,2025-12-04,38,8,False,False,seasonal_payer
+INV1000652,B001,B001-C1021,Auto Client 021,Auto Components,30,72333.04,2025-12-24,2026-01-23,closed,2026-02-04,42,12,True,False,seasonal_payer
+INV1000653,B001,B001-C1021,Auto Client 021,Auto Components,30,189229.08,2026-05-09,2026-06-08,closed,2026-06-19,41,11,False,False,seasonal_payer
+INV1000654,B001,B001-C1021,Auto Client 021,Auto Components,30,118890.98,2026-05-17,2026-06-16,closed,2026-06-26,40,10,False,False,seasonal_payer
+INV1000655,B001,B001-C1021,Auto Client 021,Auto Components,30,95636.43,2026-06-28,2026-07-28,closed,2026-07-28,30,0,False,False,seasonal_payer
+INV1000656,B001,B001-C1021,Auto Client 021,Auto Components,30,139172.71,2026-07-13,2026-08-12,closed,2026-08-25,43,13,False,False,seasonal_payer
+INV1000657,B001,B001-C1022,IT Client 022,IT & Business Services,45,218556.06,2024-03-29,2024-05-13,closed,2024-05-28,60,15,False,False,seasonal_payer
+INV1000658,B001,B001-C1022,IT Client 022,IT & Business Services,45,233910.8,2024-06-29,2024-08-13,closed,2024-08-26,58,13,False,False,seasonal_payer
+INV1000659,B001,B001-C1022,IT Client 022,IT & Business Services,45,483459.63,2024-07-15,2024-08-29,open,,,,False,False,seasonal_payer
+INV1000660,B001,B001-C1022,IT Client 022,IT & Business Services,45,317158.36,2024-08-08,2024-09-22,closed,2024-10-01,54,9,False,False,seasonal_payer
+INV1000661,B001,B001-C1022,IT Client 022,IT & Business Services,45,417955.23,2024-08-15,2024-09-29,closed,2024-10-09,55,10,False,False,seasonal_payer
+INV1000662,B001,B001-C1022,IT Client 022,IT & Business Services,45,358912.31,2024-09-01,2024-10-16,disputed_open,,,,False,False,seasonal_payer
+INV1000663,B001,B001-C1022,IT Client 022,IT & Business Services,45,250631.41,2024-09-26,2024-11-10,closed,2024-11-21,56,11,False,False,seasonal_payer
+INV1000664,B001,B001-C1022,IT Client 022,IT & Business Services,45,184419.96,2024-10-09,2024-11-23,closed,2024-11-20,42,-3,False,False,seasonal_payer
+INV1000665,B001,B001-C1022,IT Client 022,IT & Business Services,45,234081.99,2024-12-26,2025-02-09,closed,2025-02-22,58,13,False,False,seasonal_payer
+INV1000666,B001,B001-C1022,IT Client 022,IT & Business Services,45,268327.71,2024-12-26,2025-02-09,closed,2025-02-12,48,3,False,False,seasonal_payer
+INV1000667,B001,B001-C1022,IT Client 022,IT & Business Services,45,247677.44,2025-01-25,2025-03-11,closed,2025-03-23,57,12,False,False,seasonal_payer
+INV1000668,B001,B001-C1022,IT Client 022,IT & Business Services,45,217950.42,2025-02-11,2025-03-28,closed,2025-04-10,58,13,False,False,seasonal_payer
+INV1000669,B001,B001-C1022,IT Client 022,IT & Business Services,45,225300.44,2025-02-21,2025-04-07,closed,2025-04-24,62,17,False,False,seasonal_payer
+INV1000670,B001,B001-C1022,IT Client 022,IT & Business Services,45,220413.22,2025-04-12,2025-05-27,closed,2025-06-13,62,17,False,False,seasonal_payer
+INV1000671,B001,B001-C1022,IT Client 022,IT & Business Services,45,276335.9,2025-05-30,2025-07-14,closed,2025-07-20,51,6,False,False,seasonal_payer
+INV1000672,B001,B001-C1022,IT Client 022,IT & Business Services,45,415741.76,2025-06-07,2025-07-22,closed,2025-07-30,53,8,False,False,seasonal_payer
+INV1000673,B001,B001-C1022,IT Client 022,IT & Business Services,45,294553.63,2025-06-20,2025-08-04,closed,2025-08-09,50,5,False,False,seasonal_payer
+INV1000674,B001,B001-C1022,IT Client 022,IT & Business Services,45,290750.06,2025-08-21,2025-10-05,closed,2025-10-11,51,6,False,False,seasonal_payer
+INV1000675,B001,B001-C1022,IT Client 022,IT & Business Services,45,253271.52,2025-09-25,2025-11-09,closed,2025-11-13,49,4,False,False,seasonal_payer
+INV1000676,B001,B001-C1022,IT Client 022,IT & Business Services,45,324932.91,2025-10-30,2025-12-14,closed,2025-12-19,50,5,False,False,seasonal_payer
+INV1000677,B001,B001-C1022,IT Client 022,IT & Business Services,45,341808.73,2025-11-01,2025-12-16,closed,2026-01-07,67,22,False,False,seasonal_payer
+INV1000678,B001,B001-C1022,IT Client 022,IT & Business Services,45,263336.83,2025-11-02,2025-12-17,open,,,,False,False,seasonal_payer
+INV1000679,B001,B001-C1022,IT Client 022,IT & Business Services,45,288404.11,2025-11-02,2025-12-17,closed,2025-12-26,54,9,False,False,seasonal_payer
+INV1000680,B001,B001-C1022,IT Client 022,IT & Business Services,45,398066.66,2025-11-11,2025-12-26,closed,2025-12-26,45,0,False,False,seasonal_payer
+INV1000681,B001,B001-C1022,IT Client 022,IT & Business Services,45,306742.81,2025-11-17,2026-01-01,closed,2026-01-08,52,7,False,False,seasonal_payer
+INV1000682,B001,B001-C1022,IT Client 022,IT & Business Services,45,286393.43,2025-11-30,2026-01-14,closed,2026-01-12,43,-2,False,False,seasonal_payer
+INV1000683,B001,B001-C1022,IT Client 022,IT & Business Services,45,319144.92,2026-01-13,2026-02-27,closed,2026-03-26,72,27,False,False,seasonal_payer
+INV1000684,B001,B001-C1022,IT Client 022,IT & Business Services,45,1628656.21,2026-02-04,2026-03-21,closed,2026-04-11,66,21,False,True,seasonal_payer
+INV1000685,B001,B001-C1022,IT Client 022,IT & Business Services,45,284310.17,2026-03-05,2026-04-19,closed,2026-04-22,48,3,False,False,seasonal_payer
+INV1000686,B001,B001-C1022,IT Client 022,IT & Business Services,45,239904.45,2026-04-14,2026-05-29,closed,2026-06-14,61,16,False,False,seasonal_payer
+INV1000687,B001,B001-C1022,IT Client 022,IT & Business Services,45,272753.63,2026-04-22,2026-06-06,closed,2026-06-23,62,17,False,False,seasonal_payer
+INV1000688,B001,B001-C1022,IT Client 022,IT & Business Services,45,388803.49,2026-05-01,2026-06-15,closed,2026-06-18,48,3,False,False,seasonal_payer
+INV1000689,B001,B001-C1022,IT Client 022,IT & Business Services,45,306461.49,2026-06-11,2026-07-26,closed,2026-08-05,55,10,False,False,seasonal_payer
+INV1000690,B001,B001-C1022,IT Client 022,IT & Business Services,45,164795.0,2026-07-15,2026-08-29,closed,2026-08-29,45,0,False,False,seasonal_payer
+INV1000691,B001,B001-C1023,Construction Client 023,Construction & Infra,45,10885.36,2024-03-26,2024-05-10,closed,2024-05-09,44,-1,True,False,seasonal_payer
+INV1000692,B001,B001-C1023,Construction Client 023,Construction & Infra,45,57441.01,2024-04-06,2024-05-21,closed,2024-05-23,47,2,False,True,seasonal_payer
+INV1000693,B001,B001-C1023,Construction Client 023,Construction & Infra,45,25309.79,2024-04-08,2024-05-23,closed,2024-06-03,56,11,False,False,seasonal_payer
+INV1000694,B001,B001-C1023,Construction Client 023,Construction & Infra,45,6612.99,2024-04-14,2024-05-29,closed,2024-06-01,48,3,False,False,seasonal_payer
+INV1000695,B001,B001-C1023,Construction Client 023,Construction & Infra,45,18596.42,2024-05-10,2024-06-24,closed,2024-07-09,60,15,False,False,seasonal_payer
+INV1000696,B001,B001-C1023,Construction Client 023,Construction & Infra,45,9847.87,2024-05-18,2024-07-02,closed,2024-06-29,42,-3,False,False,seasonal_payer
+INV1000697,B001,B001-C1023,Construction Client 023,Construction & Infra,45,55682.54,2024-05-23,2024-07-07,closed,2024-07-10,48,3,False,True,seasonal_payer
+INV1000698,B001,B001-C1023,Construction Client 023,Construction & Infra,45,13268.59,2024-05-25,2024-07-09,closed,2024-07-15,51,6,False,False,seasonal_payer
+INV1000699,B001,B001-C1023,Construction Client 023,Construction & Infra,45,9395.26,2024-06-30,2024-08-14,closed,2024-09-01,63,18,False,False,seasonal_payer
+INV1000700,B001,B001-C1023,Construction Client 023,Construction & Infra,45,61729.67,2024-08-27,2024-10-11,closed,2024-10-24,58,13,False,True,seasonal_payer
+INV1000701,B001,B001-C1023,Construction Client 023,Construction & Infra,45,11169.57,2024-10-08,2024-11-22,closed,2024-12-06,59,14,False,False,seasonal_payer
+INV1000702,B001,B001-C1023,Construction Client 023,Construction & Infra,45,9220.91,2024-10-08,2024-11-22,closed,2024-12-05,58,13,False,False,seasonal_payer
+INV1000703,B001,B001-C1023,Construction Client 023,Construction & Infra,45,49329.84,2024-11-13,2024-12-28,closed,2025-01-06,54,9,False,True,seasonal_payer
+INV1000704,B001,B001-C1023,Construction Client 023,Construction & Infra,45,7818.09,2024-12-06,2025-01-20,closed,2025-01-17,42,-3,False,False,seasonal_payer
+INV1000705,B001,B001-C1023,Construction Client 023,Construction & Infra,45,14002.87,2024-12-12,2025-01-26,closed,2025-02-02,52,7,False,False,seasonal_payer
+INV1000706,B001,B001-C1023,Construction Client 023,Construction & Infra,45,11173.83,2024-12-23,2025-02-06,closed,2025-02-11,50,5,False,False,seasonal_payer
+INV1000707,B001,B001-C1023,Construction Client 023,Construction & Infra,45,9076.51,2025-01-27,2025-03-13,closed,2025-03-21,53,8,False,False,seasonal_payer
+INV1000708,B001,B001-C1023,Construction Client 023,Construction & Infra,45,14761.99,2025-02-22,2025-04-08,closed,2025-04-07,44,-1,False,False,seasonal_payer
+INV1000709,B001,B001-C1023,Construction Client 023,Construction & Infra,45,9824.58,2025-02-24,2025-04-10,closed,2025-04-10,45,0,False,False,seasonal_payer
+INV1000710,B001,B001-C1023,Construction Client 023,Construction & Infra,45,18060.5,2025-03-09,2025-04-23,closed,2025-04-15,37,-8,False,False,seasonal_payer
+INV1000711,B001,B001-C1023,Construction Client 023,Construction & Infra,45,12970.4,2025-03-25,2025-05-09,closed,2025-05-24,60,15,False,False,seasonal_payer
+INV1000712,B001,B001-C1023,Construction Client 023,Construction & Infra,45,8299.18,2025-04-22,2025-06-06,closed,2025-06-08,47,2,False,False,seasonal_payer
+INV1000713,B001,B001-C1023,Construction Client 023,Construction & Infra,45,9642.72,2025-06-22,2025-08-06,closed,2025-08-23,62,17,False,False,seasonal_payer
+INV1000714,B001,B001-C1023,Construction Client 023,Construction & Infra,45,10594.53,2025-06-25,2025-08-09,closed,2025-08-28,64,19,False,False,seasonal_payer
+INV1000715,B001,B001-C1023,Construction Client 023,Construction & Infra,45,12845.78,2025-08-25,2025-10-09,closed,2025-10-20,56,11,False,False,seasonal_payer
+INV1000716,B001,B001-C1023,Construction Client 023,Construction & Infra,45,6558.27,2025-09-07,2025-10-22,closed,2025-11-03,57,12,False,False,seasonal_payer
+INV1000717,B001,B001-C1023,Construction Client 023,Construction & Infra,45,14458.85,2025-09-24,2025-11-08,closed,2025-11-19,56,11,False,False,seasonal_payer
+INV1000718,B001,B001-C1023,Construction Client 023,Construction & Infra,45,12703.21,2025-11-01,2025-12-16,closed,2025-12-21,50,5,False,False,seasonal_payer
+INV1000719,B001,B001-C1023,Construction Client 023,Construction & Infra,45,11041.73,2025-11-06,2025-12-21,closed,2025-12-29,53,8,False,False,seasonal_payer
+INV1000720,B001,B001-C1023,Construction Client 023,Construction & Infra,45,5719.42,2025-11-26,2026-01-10,closed,2026-01-14,49,4,False,False,seasonal_payer
+INV1000721,B001,B001-C1023,Construction Client 023,Construction & Infra,45,8732.89,2025-11-29,2026-01-13,closed,2026-01-16,48,3,False,False,seasonal_payer
+INV1000722,B001,B001-C1023,Construction Client 023,Construction & Infra,45,17397.79,2025-12-02,2026-01-16,closed,2026-01-26,55,10,False,False,seasonal_payer
+INV1000723,B001,B001-C1023,Construction Client 023,Construction & Infra,45,9122.82,2025-12-11,2026-01-25,closed,2026-01-21,41,-4,False,False,seasonal_payer
+INV1000724,B001,B001-C1023,Construction Client 023,Construction & Infra,45,12114.46,2025-12-25,2026-02-08,closed,2026-02-12,49,4,False,False,seasonal_payer
+INV1000725,B001,B001-C1023,Construction Client 023,Construction & Infra,45,9830.46,2025-12-30,2026-02-13,closed,2026-02-12,44,-1,False,False,seasonal_payer
+INV1000726,B001,B001-C1023,Construction Client 023,Construction & Infra,45,16917.72,2026-01-20,2026-03-06,closed,2026-03-06,45,0,False,False,seasonal_payer
+INV1000727,B001,B001-C1023,Construction Client 023,Construction & Infra,45,13609.16,2026-01-28,2026-03-14,closed,2026-03-21,52,7,False,False,seasonal_payer
+INV1000728,B001,B001-C1023,Construction Client 023,Construction & Infra,45,35986.17,2026-03-08,2026-04-22,disputed_open,,,,False,True,seasonal_payer
+INV1000729,B001,B001-C1023,Construction Client 023,Construction & Infra,45,8747.8,2026-04-20,2026-06-04,closed,2026-06-11,52,7,False,False,seasonal_payer
+INV1000730,B001,B001-C1023,Construction Client 023,Construction & Infra,45,11932.7,2026-05-06,2026-06-20,closed,2026-06-19,44,-1,False,False,seasonal_payer
+INV1000731,B001,B001-C1023,Construction Client 023,Construction & Infra,45,12157.41,2026-05-27,2026-07-11,closed,2026-07-21,55,10,False,False,seasonal_payer
+INV1000732,B001,B001-C1023,Construction Client 023,Construction & Infra,45,8299.22,2026-06-06,2026-07-21,closed,2026-07-27,51,6,False,False,seasonal_payer
+INV1000733,B001,B001-C1023,Construction Client 023,Construction & Infra,45,10484.97,2026-07-13,2026-08-27,disputed_open,,,,False,False,seasonal_payer
+INV1000734,B001,B001-C1023,Construction Client 023,Construction & Infra,45,11719.93,2026-07-22,2026-09-05,open,,,,False,False,seasonal_payer
+INV1000735,B001,B001-C1023,Construction Client 023,Construction & Infra,45,11755.03,2026-07-26,2026-09-09,open,,,,False,False,seasonal_payer
+INV1000736,B001,B001-C1024,Construction Client 024,Construction & Infra,60,191127.67,2024-04-02,2024-06-01,closed,2024-06-24,83,23,False,False,chronic_late_payer
+INV1000737,B001,B001-C1024,Construction Client 024,Construction & Infra,60,141547.88,2024-04-16,2024-06-15,closed,2024-07-10,85,25,False,False,chronic_late_payer
+INV1000738,B001,B001-C1024,Construction Client 024,Construction & Infra,60,215084.76,2024-04-26,2024-06-25,closed,2024-07-09,74,14,False,False,chronic_late_payer
+INV1000739,B001,B001-C1024,Construction Client 024,Construction & Infra,60,197054.37,2024-04-26,2024-06-25,closed,2024-08-19,115,55,False,False,chronic_late_payer
+INV1000740,B001,B001-C1024,Construction Client 024,Construction & Infra,60,102293.01,2024-04-30,2024-06-29,closed,2024-08-11,103,43,False,False,chronic_late_payer
+INV1000741,B001,B001-C1024,Construction Client 024,Construction & Infra,60,112464.78,2024-06-17,2024-08-16,closed,2024-09-19,94,34,False,False,chronic_late_payer
+INV1000742,B001,B001-C1024,Construction Client 024,Construction & Infra,60,163075.93,2024-07-15,2024-09-13,closed,2024-10-17,94,34,False,False,chronic_late_payer
+INV1000743,B001,B001-C1024,Construction Client 024,Construction & Infra,60,193411.1,2024-08-16,2024-10-15,closed,2024-11-25,101,41,False,False,chronic_late_payer
+INV1000744,B001,B001-C1024,Construction Client 024,Construction & Infra,60,156657.53,2024-08-25,2024-10-24,closed,2024-11-29,96,36,False,False,chronic_late_payer
+INV1000745,B001,B001-C1024,Construction Client 024,Construction & Infra,60,137427.33,2024-10-03,2024-12-02,closed,2025-01-23,112,52,False,False,chronic_late_payer
+INV1000746,B001,B001-C1024,Construction Client 024,Construction & Infra,60,180939.03,2024-12-06,2025-02-04,closed,2025-03-10,94,34,True,False,chronic_late_payer
+INV1000747,B001,B001-C1024,Construction Client 024,Construction & Infra,60,142942.96,2025-01-02,2025-03-03,closed,2025-03-29,86,26,False,False,chronic_late_payer
+INV1000748,B001,B001-C1024,Construction Client 024,Construction & Infra,60,123882.72,2025-01-15,2025-03-16,closed,2025-04-23,98,38,False,False,chronic_late_payer
+INV1000749,B001,B001-C1024,Construction Client 024,Construction & Infra,60,175294.6,2025-01-18,2025-03-19,closed,2025-04-30,102,42,False,False,chronic_late_payer
+INV1000750,B001,B001-C1024,Construction Client 024,Construction & Infra,60,172216.35,2025-03-01,2025-04-30,closed,2025-05-14,74,14,True,False,chronic_late_payer
+INV1000751,B001,B001-C1024,Construction Client 024,Construction & Infra,60,136661.2,2025-03-02,2025-05-01,closed,2025-05-26,85,25,False,False,chronic_late_payer
+INV1000752,B001,B001-C1024,Construction Client 024,Construction & Infra,60,226277.82,2025-05-02,2025-07-01,closed,2025-07-25,84,24,False,False,chronic_late_payer
+INV1000753,B001,B001-C1024,Construction Client 024,Construction & Infra,60,101050.7,2025-05-21,2025-07-20,closed,2025-08-24,95,35,False,False,chronic_late_payer
+INV1000754,B001,B001-C1024,Construction Client 024,Construction & Infra,60,149404.96,2025-06-13,2025-08-12,closed,2025-09-12,91,31,False,False,chronic_late_payer
+INV1000755,B001,B001-C1024,Construction Client 024,Construction & Infra,60,160150.92,2025-06-30,2025-08-29,closed,2025-10-26,118,58,False,False,chronic_late_payer
+INV1000756,B001,B001-C1024,Construction Client 024,Construction & Infra,60,118597.49,2025-08-21,2025-10-20,closed,2025-11-21,92,32,False,False,chronic_late_payer
+INV1000757,B001,B001-C1024,Construction Client 024,Construction & Infra,60,131211.14,2025-10-29,2025-12-28,closed,2026-01-18,81,21,False,False,chronic_late_payer
+INV1000758,B001,B001-C1024,Construction Client 024,Construction & Infra,60,178885.3,2025-11-17,2026-01-16,closed,2026-02-05,80,20,False,False,chronic_late_payer
+INV1000759,B001,B001-C1024,Construction Client 024,Construction & Infra,60,157646.04,2026-01-27,2026-03-28,closed,2026-05-03,96,36,False,False,chronic_late_payer
+INV1000760,B001,B001-C1024,Construction Client 024,Construction & Infra,60,158037.82,2026-02-13,2026-04-14,closed,2026-05-25,101,41,False,False,chronic_late_payer
+INV1000761,B001,B001-C1024,Construction Client 024,Construction & Infra,60,144316.62,2026-04-16,2026-06-15,closed,2026-07-28,103,43,True,False,chronic_late_payer
+INV1000762,B001,B001-C1024,Construction Client 024,Construction & Infra,60,111225.54,2026-05-19,2026-07-18,closed,2026-08-31,104,44,False,False,chronic_late_payer
+INV1000763,B001,B001-C1024,Construction Client 024,Construction & Infra,60,175878.75,2026-08-07,2026-10-06,open,,,,False,False,chronic_late_payer
+INV1000764,B001,B001-C1024,Construction Client 024,Construction & Infra,60,171098.16,2026-08-19,2026-10-18,open,,,,False,False,chronic_late_payer
+INV1000765,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,272443.72,2024-08-27,2024-09-11,closed,2024-09-10,14,-1,False,False,prompt_payer
+INV1000766,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,341551.16,2024-09-17,2024-10-02,closed,2024-10-04,17,2,False,False,prompt_payer
+INV1000767,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,333862.23,2024-12-14,2024-12-29,closed,2024-12-26,12,-3,False,False,prompt_payer
+INV1000768,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,317947.18,2025-01-01,2025-01-16,closed,2025-01-16,15,0,False,False,prompt_payer
+INV1000769,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,273455.54,2025-04-03,2025-04-18,closed,2025-04-21,18,3,False,False,prompt_payer
+INV1000770,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,167947.71,2025-09-29,2025-10-14,closed,2025-10-15,16,1,False,False,prompt_payer
+INV1000771,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,284329.05,2025-11-16,2025-12-01,closed,2025-12-01,15,0,False,False,prompt_payer
+INV1000772,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,269266.53,2026-03-14,2026-03-29,closed,2026-03-23,9,-6,False,False,prompt_payer
+INV1000773,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,330893.37,2026-05-16,2026-05-31,closed,2026-06-02,17,2,False,False,prompt_payer
+INV1000774,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,258341.42,2026-06-26,2026-07-11,closed,2026-07-22,26,11,False,False,prompt_payer
+INV1000775,B001,B001-C1025,Metal Client 025,Metal & Engineering,15,196488.07,2026-08-30,2026-09-14,open,,,,False,False,prompt_payer
+INV1000776,B001,B001-C1026,Chemicals Client 026,Chemicals & Plastics,45,676807.13,2024-05-14,2024-06-28,closed,2024-07-08,55,10,False,False,average_payer
+INV1000777,B001,B001-C1026,Chemicals Client 026,Chemicals & Plastics,45,401825.37,2024-07-21,2024-09-04,closed,2024-09-02,43,-2,False,False,average_payer
+INV1000778,B001,B001-C1026,Chemicals Client 026,Chemicals & Plastics,45,615880.31,2024-10-19,2024-12-03,closed,2024-12-08,50,5,False,False,average_payer
+INV1000779,B001,B001-C1026,Chemicals Client 026,Chemicals & Plastics,45,305806.09,2025-01-03,2025-02-17,closed,2025-02-23,51,6,False,False,average_payer
+INV1000780,B001,B001-C1026,Chemicals Client 026,Chemicals & Plastics,45,367593.02,2026-07-08,2026-08-22,closed,2026-08-29,52,7,False,False,average_payer
+INV1000781,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,24670.87,2024-03-19,2024-04-18,closed,2024-04-29,41,11,False,False,average_payer
+INV1000782,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,19840.24,2024-09-06,2024-10-06,closed,2024-10-12,36,6,False,False,average_payer
+INV1000783,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,34931.42,2024-09-16,2024-10-16,closed,2024-10-09,23,-7,False,False,average_payer
+INV1000784,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,25855.54,2024-09-18,2024-10-18,closed,2024-10-24,36,6,False,False,average_payer
+INV1000785,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,19347.11,2025-01-31,2025-03-02,closed,2025-03-04,32,2,False,False,average_payer
+INV1000786,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,37416.09,2025-02-22,2025-03-24,open,,,,False,False,average_payer
+INV1000787,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,26285.79,2025-03-27,2025-04-26,closed,2025-05-07,41,11,False,False,average_payer
+INV1000788,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,29459.14,2025-08-11,2025-09-10,closed,2025-10-04,54,24,False,False,average_payer
+INV1000789,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,137014.67,2025-09-08,2025-10-08,closed,2025-10-12,34,4,False,True,average_payer
+INV1000790,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,33432.37,2025-10-29,2025-11-28,closed,2025-11-24,26,-4,False,False,average_payer
+INV1000791,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,25883.1,2025-11-24,2025-12-24,closed,2026-01-02,39,9,False,False,average_payer
+INV1000792,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,31465.47,2025-12-02,2026-01-01,closed,2026-01-09,38,8,False,False,average_payer
+INV1000793,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,39477.75,2025-12-18,2026-01-17,closed,2026-01-21,34,4,False,False,average_payer
+INV1000794,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,41224.63,2026-03-04,2026-04-03,closed,2026-04-01,28,-2,False,False,average_payer
+INV1000795,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,17984.64,2026-04-23,2026-05-23,closed,2026-05-25,32,2,False,False,average_payer
+INV1000796,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,26659.46,2026-04-28,2026-05-28,closed,2026-06-01,34,4,False,False,average_payer
+INV1000797,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,38012.12,2026-05-01,2026-05-31,closed,2026-06-16,46,16,False,False,average_payer
+INV1000798,B001,B001-C1027,Textiles Client 027,Textiles & Apparel,30,56753.36,2026-05-31,2026-06-30,closed,2026-07-06,36,6,False,False,average_payer
