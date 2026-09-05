@@ -13,18 +13,55 @@ first, financing last.
 It is explicitly **decision support, not a lender**. It never initiates,
 approves, or brokers financing.
 
+**Live demo:** <https://msme-cash-flow-digital-twin.vercel.app/>
+
+> The live deployment is the frontend only. Some data-dependent screens need
+> the model server and gateway described in [Running it](#running-it) to show
+> real numbers — see [Troubleshooting](#troubleshooting) if a section looks
+> empty.
+
 ---
 
 ## Contents
 
+- [Features](#features)
+- [How it works](#how-it-works)
 - [Running it](#running-it)
 - [Troubleshooting](#troubleshooting)
 - [Architecture](#architecture)
+- [Model validation](#model-validation)
 - [What each screen does](#what-each-screen-does)
 - [The MSMED Act layer](#the-msmed-act-layer)
 - [Design decisions worth knowing](#design-decisions-worth-knowing)
 - [Known limitations](#known-limitations)
 - [How this compares to existing tools](#how-this-compares-to-existing-tools)
+
+---
+
+## Features
+
+- Quantile payment-date prediction (p10 / p50 / p90) per invoice, per business
+- Monte Carlo cash-flow forecasting with optimistic / expected / pessimistic bands
+- Anomaly detection over invoice and payment behaviour (Isolation Forest)
+- SHAP-based explainability for every prediction
+- Plain-language narration of forecasts and risk via an LLM (Groq / Llama)
+- OCR-based invoice ingestion from uploaded documents
+- A causal risk graph tracing a cash shortfall back to named customers and invoices
+- A non-debt-first recommendation ranker (cheapest and most reversible option first, financing last)
+- Scenario simulation (late-paying customers, sales drops, cost increases) with no effect on real data
+- A statutory (MSMED Act) module computing interest owed, MSEFC referability, and Section 43B(h) exposure directly from invoice data
+- CSV upload of a business's own invoice data, replacing the bundled dataset end-to-end
+- Support for 18 simulated MSMEs, each with its own trained payment-behaviour model
+
+## How It Works
+
+- Open the dashboard for a business (or upload your own `invoices.csv`) to see headline cash-flow stats, the forecast chart, and the causal risk graph.
+- The system predicts, per open invoice, a range of likely payment dates rather than a single date, then runs a Monte Carlo simulation forward from today's cash position.
+- Anomalies in invoice or payment patterns are flagged automatically and surfaced on the dashboard and risk graph.
+- Drag scenario sliders (a customer pays N days late, sales fall X%, costs rise Y%) to see the projection recalculate live — nothing here touches real data.
+- Every prediction carries a SHAP-driven explanation and, where configured, a plain-language narration of *why* the model says what it says.
+- Recovery Options ranks concrete next steps by cost and time-to-cash, with financing shown last and explicitly not recommended by default.
+- The Legal Position page runs the MSMED Act layer over the same invoice data — statutory interest owed, buyers referable to the MSEFC, and Section 43B(h) tax exposure — with no separate data entry.
 
 ---
 
@@ -133,7 +170,100 @@ its startup customer-history features. **A CSV upload must overwrite both**, or
 Model 1 keeps scoring old history while every other endpoint has moved on.
 
 Current composition: 4,958 closed, 264 open, 83 `disputed_open`. Payment terms
-run 15/30/45/60/90 days.
+run 15/30/45/60/90 days. Alongside this shared dataset, 18 simulated MSMEs
+(`AI_models/models/businesses/`) each carry their own invoice history and
+their own trained Model 1, used to validate that the approach generalises
+beyond a single business (see [Model validation](#model-validation)).
+
+---
+
+## Model validation
+
+Model 1 (payment-behaviour prediction) is evaluated with a strict,
+time-ordered train / validation / test split — the test split is scored
+exactly once, using the artifacts already shipped in `models/`, never
+retrained to chase the number. All figures below come from
+`AI_models/evaluation/`; regenerate them with:
+
+```bash
+cd AI_models
+.venv/Scripts/python evaluation/build_eval_charts.py
+.venv/Scripts/python evaluation/evaluate_test_set.py
+```
+
+### Held-out performance
+
+| Split | n | MAE (days) | RMSE (days) | p10–p90 coverage | Bias | Naive due-date MAE | Customer-average MAE |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Validation | 745 | 6.39 | 10.82 | 82.0% | +0.13 | 11.97 | 7.09 |
+| **Test (final, one-time)** | 740 | **6.21** | **9.94** | 87.4% | +0.89 | 10.32 | 6.74 |
+
+Model 1 beats a "trust the contractual due date" baseline by roughly **40%**
+and edges out a customer's own running average — the estimate a sharp
+accounts clerk already keeps by hand.
+
+![Actual vs. predicted payment days](AI_models/evaluation/charts/1_actual_vs_predicted.png)
+![Model vs. naive baselines](AI_models/evaluation/charts/2_model_vs_baselines.png)
+![Uncertainty band calibration by customer archetype](AI_models/evaluation/charts/3_uncertainty_by_archetype.png)
+![Test vs. validation performance](AI_models/evaluation/charts/4_test_vs_validation.png)
+![Stability across four rolling time-based CV windows](AI_models/evaluation/charts/5_rolling_cv_stability.png)
+![Model vs. baselines, honestly compared](AI_models/evaluation/charts/6_honest_baseline_comparison.png)
+
+### Rolling-window stability
+
+Four independent, non-overlapping time windows, each trained on everything
+before it:
+
+| Validation window | MAE | RMSE | Coverage |
+|---|---:|---:|---:|
+| 2025-02 → 2025-04 | 6.11 | 10.05 | 79.4% |
+| 2025-05 → 2025-07 | 6.23 | 10.69 | 78.5% |
+| 2025-08 → 2025-10 | 7.61 | 12.29 | 79.3% |
+| 2025-11 → 2026-01 | 6.04 | 9.89 | 82.6% |
+
+Accuracy and calibration hold up fold to fold rather than being an artifact of
+one lucky split.
+
+### RandomForest vs. XGBoost, averaged across five businesses
+
+| Model | MAE | RMSE | Coverage | Mean band width |
+|---|---:|---:|---:|---:|
+| **RandomForest (production)** | 6.99 | 9.98 | **82.6%** | 24.8 days |
+| XGBoost | **6.67** | **9.52** | 65.6% | 16.1 days |
+
+XGBoost's point predictions are sharper, but its p10–p90 interval covers the
+true outcome only 65.6% of the time against an 80% target — a narrower band
+that lies about its own confidence. RandomForest stays in production because,
+for a forecast a business will act on, an honest wide interval beats a
+confident narrow one that is wrong one time in three.
+
+### Per-business transfer
+
+A model trained on one simulated MSME does not transfer well to another: MAE
+trained-and-tested on the same business ranges 5.4–8.5 days, but jumps to
+9.3–13.5 days when a model is applied to a different business it never saw.
+This is the reason each of the 18 simulated businesses gets its own trained
+Model 1 rather than one shared model — customer mix, sector, and payment
+culture differ enough between businesses that pooling them costs accuracy.
+
+### Scaling from 1 business to 18
+
+The dataset originally shipped with a single simulated business; it now
+carries 18. Scaling up traded a small amount of accuracy for a much more
+realistic, harder-to-overfit dataset:
+
+| Dataset | Train rows | Test rows | MAE | RMSE | Coverage | Mean band width |
+|---|---:|---:|---:|---:|---:|---:|
+| OLD (single business) | 3,470 | 744 | 6.24 | 9.93 | 88.2% | 31.0 days |
+| NEW (18 businesses, mean) | 35,039 | 7,482 | 7.37 | 10.64 | 81.5% | 25.3 days |
+
+The train/validation/test split proportions were kept identical across the
+change, so the difference is dataset diversity, not a shifted evaluation
+protocol.
+
+![Actual vs. predicted, old dataset vs. new](AI_models/evaluation/actual_vs_predicted.png)
+![Dataset scale — old vs. new](AI_models/evaluation/dataset_comparison.png)
+![Train / validation / test split — old vs. new](AI_models/evaluation/train_test_split.png)
 
 ---
 
@@ -310,6 +440,21 @@ costs nothing at all. It does not disburse money.
 owed this interest, these buyers are referable to the MSEFC, and your buyer
 loses their tax deduction if they do not pay you before 31 March."* That is
 leverage MSMEs have and almost never use.
+
+---
+
+## Team
+
+| Member | GitHub |
+|---|---|
+| **Akshat Jha** | [@akshat3106](https://github.com/akshat3106) |
+| **Adarsh** | [@ADARSH11aa](https://github.com/ADARSH11aa) |
+| **Ahinsa Mohanty** | [@ahinsa2](https://github.com/ahinsa2) |
+| **Pushpak Kumar Bagadia** | [@PushpakBagadia](https://github.com/PushpakBagadia) |
+| **Soumya Debata** | [@SoumyaDebata12](https://github.com/SoumyaDebata12) |
+| **Saummya Swaroop** | [@Saummya123swaroop](https://github.com/Saummya123swaroop) |
+
+Built for the Smart India Hackathon.
 
 ---
 
