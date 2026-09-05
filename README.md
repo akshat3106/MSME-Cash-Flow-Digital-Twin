@@ -202,11 +202,22 @@ Model 1 beats a "trust the contractual due date" baseline by roughly **40%**
 and edges out a customer's own running average — the estimate a sharp
 accounts clerk already keeps by hand.
 
+**Actual vs. predicted payment days**
 ![Actual vs. predicted payment days](AI_models/evaluation/charts/1_actual_vs_predicted.png)
+
+**Model vs. naive baselines**
 ![Model vs. naive baselines](AI_models/evaluation/charts/2_model_vs_baselines.png)
+
+**Uncertainty band calibration by customer archetype**
 ![Uncertainty band calibration by customer archetype](AI_models/evaluation/charts/3_uncertainty_by_archetype.png)
+
+**Test vs. validation performance**
 ![Test vs. validation performance](AI_models/evaluation/charts/4_test_vs_validation.png)
+
+**Stability across four rolling time-based CV windows**
 ![Stability across four rolling time-based CV windows](AI_models/evaluation/charts/5_rolling_cv_stability.png)
+
+**Model vs. baselines, honestly compared**
 ![Model vs. baselines, honestly compared](AI_models/evaluation/charts/6_honest_baseline_comparison.png)
 
 ### Rolling-window stability
@@ -245,25 +256,6 @@ trained-and-tested on the same business ranges 5.4–8.5 days, but jumps to
 This is the reason each of the 18 simulated businesses gets its own trained
 Model 1 rather than one shared model — customer mix, sector, and payment
 culture differ enough between businesses that pooling them costs accuracy.
-
-### Scaling from 1 business to 18
-
-The dataset originally shipped with a single simulated business; it now
-carries 18. Scaling up traded a small amount of accuracy for a much more
-realistic, harder-to-overfit dataset:
-
-| Dataset | Train rows | Test rows | MAE | RMSE | Coverage | Mean band width |
-|---|---:|---:|---:|---:|---:|---:|
-| OLD (single business) | 3,470 | 744 | 6.24 | 9.93 | 88.2% | 31.0 days |
-| NEW (18 businesses, mean) | 35,039 | 7,482 | 7.37 | 10.64 | 81.5% | 25.3 days |
-
-The train/validation/test split proportions were kept identical across the
-change, so the difference is dataset diversity, not a shifted evaluation
-protocol.
-
-![Actual vs. predicted, old dataset vs. new](AI_models/evaluation/actual_vs_predicted.png)
-![Dataset scale — old vs. new](AI_models/evaluation/dataset_comparison.png)
-![Train / validation / test split — old vs. new](AI_models/evaluation/train_test_split.png)
 
 ---
 
